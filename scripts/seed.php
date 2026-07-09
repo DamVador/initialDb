@@ -11,6 +11,10 @@ require __DIR__ . '/../src/bootstrap.php';
 
 $DEFAULT_PASSWORD = 'initialdb2026';
 
+// Argument optionnel : « pages » = ne réécrire que la page d'accueil
+// (laisse intacts les paramètres, les collections et le mot de passe).
+$only = $argv[1] ?? '';
+
 function seed_item(array $fields, int $order, bool $published = true): array
 {
     return array_merge([
@@ -22,10 +26,16 @@ function seed_item(array $fields, int $order, bool $published = true): array
     ], $fields);
 }
 
-/* ---- Mot de passe admin ---- */
-Content::write('auth.json', ['password_hash' => password_hash($DEFAULT_PASSWORD, PASSWORD_DEFAULT)]);
+/* ---- Mot de passe admin (créé une seule fois, jamais réécrasé) ---- */
+if (!is_file(DATA_PATH . '/auth.json')) {
+    Content::write('auth.json', ['password_hash' => password_hash($DEFAULT_PASSWORD, PASSWORD_DEFAULT)]);
+    echo "   Mot de passe admin créé : {$DEFAULT_PASSWORD}\n";
+} else {
+    echo "   Mot de passe admin existant conservé.\n";
+}
 
 /* ---- Paramètres du site ---- */
+if ($only === '') {
 Content::saveSettings([
     'site_name' => 'Initial Db',
     'tagline'   => 'Studio digital de création de sites vitrines',
@@ -41,6 +51,7 @@ Content::saveSettings([
         'hebergeur' => 'PlanetHoster',
     ],
 ]);
+}
 
 /* ---- Page d'accueil ---- */
 Content::savePage('accueil', [
@@ -70,7 +81,7 @@ Content::savePage('accueil', [
         ['num' => '03', 'title' => 'Conversion', 'text' => 'Un site rapide et clair qui transforme la visite en demande de devis ou en réservation.'],
     ],
     'offres' => [
-        'eyebrow'        => 'La grille',
+        'eyebrow'        => 'Tarifs',
         'titre'          => 'Une formule claire, des options à la carte.',
         'sous'           => 'Le site vitrine complet, puis vous ajoutez seulement ce dont vous avez besoin.',
         'offer_name'     => 'Site vitrine',
@@ -89,18 +100,29 @@ Content::savePage('accueil', [
         ['title' => 'Référencement (SEO)', 'price' => '180 €/mois', 'note' => '4 articles de blog optimisés rédigés par mois.'],
     ],
     'garage' => [
-        'eyebrow' => 'Le garage',
-        'titre'   => 'Sorties d\'atelier.',
-        'sous'    => 'Quelques réalisations récentes.',
+        'eyebrow' => 'Réalisations',
+        'titre'   => 'Nos réalisations récentes.',
+        'sous'    => 'Quelques projets récents.',
     ],
     'process' => [
-        'eyebrow' => 'La mécanique',
-        'titre'   => 'Trois temps.',
+        'eyebrow' => 'La méthode',
+        'titre'   => 'En trois étapes.',
     ],
     'etapes' => [
         ['step' => 'Étape 01', 'title' => 'Brief', 'text' => 'On cadre l\'objectif business, la cible et les mots-clés locaux qui comptent.'],
         ['step' => 'Étape 02', 'title' => 'Design & Code', 'text' => 'Conception, développement et optimisation. Vous suivez l\'avancée à chaque étape.'],
         ['step' => 'Étape 03', 'title' => 'Livraison', 'text' => 'Mise en ligne, transfert des accès, et vous êtes prêt à convertir.'],
+    ],
+    'signature' => [
+        'eyebrow' => 'Pourquoi Initial Db',
+        'titre'   => 'Ce qui fait la différence.',
+        'texte'   => 'Un studio à taille humaine, concentré sur une seule chose : que votre site vous rapporte des clients.',
+    ],
+    'atouts' => [
+        ['titre' => 'En direct, sans intermédiaire', 'texte' => 'Vous parlez directement au studio qui conçoit votre site. Pas d\'agence ni de commercial entre vous et le travail.'],
+        ['titre' => 'La performance avant tout', 'texte' => 'Chaque site est optimisé pour la vitesse et le référencement, pas seulement pour faire joli — c\'est ce qui attire vraiment les clients.'],
+        ['titre' => 'Du sur-mesure, jamais de modèle tout fait', 'texte' => 'Votre site est conçu pour votre activité et votre image, pas décliné d\'un template générique.'],
+        ['titre' => 'Un accompagnement clair', 'texte' => 'Du premier échange à la mise en ligne, vous savez toujours où en est votre projet — et le studio reste disponible ensuite.'],
     ],
     'contact' => [
         'eyebrow'   => 'Ligne de départ',
@@ -113,6 +135,9 @@ Content::savePage('accueil', [
         'seo_description' => 'Studio digital spécialisé dans les sites vitrines rapides et optimisés pour le référencement local des artisans, commerçants et PME.',
     ],
 ]);
+
+/* ---- Le reste (listes, collections) : uniquement en install complète ---- */
+if ($only === '') {
 
 /* ---- Pages listes ---- */
 Content::savePage('articles-index', [
@@ -267,6 +292,11 @@ Content::saveCollection('secteurs', [
     ], 1, true),
 ]);
 
-echo "✅ Données de départ créées.\n";
-echo "   Mot de passe admin : {$DEFAULT_PASSWORD}\n";
-echo "   Pensez à le changer dans l'admin (rubrique « Mot de passe »).\n";
+} // fin du bloc « install complète »
+
+if ($only === 'pages') {
+    echo "✅ Page d'accueil mise à jour (le reste est inchangé).\n";
+} else {
+    echo "✅ Données de départ créées.\n";
+    echo "   Pensez à changer le mot de passe dans l'admin (rubrique « Mot de passe »).\n";
+}

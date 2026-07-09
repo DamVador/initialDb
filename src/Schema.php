@@ -155,6 +155,15 @@ class Schema
                         'title' => ['type' => 'text', 'label' => 'Titre'],
                         'text'  => ['type' => 'textarea', 'label' => 'Texte'],
                     ]],
+                    'signature' => ['type' => 'group', 'label' => 'Section « Ce qui fait la différence »', 'fields' => [
+                        'eyebrow' => ['type' => 'text', 'label' => 'Sur-titre'],
+                        'titre'   => ['type' => 'text', 'label' => 'Titre'],
+                        'texte'   => ['type' => 'textarea', 'label' => 'Texte d\'introduction'],
+                    ]],
+                    'atouts' => ['type' => 'repeater', 'label' => 'Points forts', 'item_label' => 'Point fort', 'fields' => [
+                        'titre' => ['type' => 'text', 'label' => 'Titre'],
+                        'texte' => ['type' => 'textarea', 'label' => 'Texte'],
+                    ]],
                     'contact' => ['type' => 'group', 'label' => 'Section contact (bas de page)', 'fields' => [
                         'eyebrow'   => ['type' => 'text', 'label' => 'Sur-titre'],
                         'titre'     => ['type' => 'text', 'label' => 'Titre'],

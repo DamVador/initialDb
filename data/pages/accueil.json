@@ -46,7 +46,7 @@
         }
     ],
     "offres": {
-        "eyebrow": "La grille",
+        "eyebrow": "Tarifs",
         "titre": "Une formule claire, des options à la carte.",
         "sous": "Le site vitrine complet, puis vous ajoutez seulement ce dont vous avez besoin.",
         "offer_name": "Site vitrine",
@@ -73,13 +73,13 @@
         }
     ],
     "garage": {
-        "eyebrow": "Le garage",
-        "titre": "Sorties d'atelier.",
-        "sous": "Quelques réalisations récentes."
+        "eyebrow": "Réalisations",
+        "titre": "Nos réalisations récentes.",
+        "sous": "Quelques projets récents."
     },
     "process": {
-        "eyebrow": "La mécanique",
-        "titre": "Trois temps."
+        "eyebrow": "La méthode",
+        "titre": "En trois étapes."
     },
     "etapes": [
         {
@@ -96,6 +96,29 @@
             "step": "Étape 03",
             "title": "Livraison",
             "text": "Mise en ligne, transfert des accès, et vous êtes prêt à convertir."
+        }
+    ],
+    "signature": {
+        "eyebrow": "Pourquoi Initial Db",
+        "titre": "Ce qui fait la différence.",
+        "texte": "Un studio à taille humaine, concentré sur une seule chose : que votre site vous rapporte des clients."
+    },
+    "atouts": [
+        {
+            "titre": "En direct, sans intermédiaire",
+            "texte": "Vous parlez directement au studio qui conçoit votre site. Pas d'agence ni de commercial entre vous et le travail."
+        },
+        {
+            "titre": "La performance avant tout",
+            "texte": "Chaque site est optimisé pour la vitesse et le référencement, pas seulement pour faire joli — c'est ce qui attire vraiment les clients."
+        },
+        {
+            "titre": "Du sur-mesure, jamais de modèle tout fait",
+            "texte": "Votre site est conçu pour votre activité et votre image, pas décliné d'un template générique."
+        },
+        {
+            "titre": "Un accompagnement clair",
+            "texte": "Du premier échange à la mise en ligne, vous savez toujours où en est votre projet — et le studio reste disponible ensuite."
         }
     ],
     "contact": {

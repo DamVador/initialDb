@@ -129,6 +129,28 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
   </div>
 </section>
 
+<!-- CE QUI FAIT LA DIFFÉRENCE -->
+<?php $signature = $page['signature'] ?? []; ?>
+<section class="signature">
+  <div class="wrap">
+    <div class="signature-tete">
+      <span class="eyebrow"><?= e($signature['eyebrow'] ?? '') ?></span>
+      <h2 class="titre"><?= e($signature['titre'] ?? '') ?></h2>
+      <?php if (!empty($signature['texte'])): ?><p class="signature-intro"><?= e($signature['texte']) ?></p><?php endif; ?>
+    </div>
+    <?php if (!empty($page['atouts'])): ?>
+    <div class="signature-grid">
+      <?php foreach ($page['atouts'] as $a): ?>
+      <div class="atout">
+        <h3><?= e($a['titre'] ?? '') ?></h3>
+        <p><?= e($a['texte'] ?? '') ?></p>
+      </div>
+      <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="dark pied">
   <div class="wrap">
