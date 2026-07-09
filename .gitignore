@@ -19,6 +19,9 @@ dist/
 Capture d’écran*.png
 _captest.html
 
+# Skill Claude déposé dans le projet (gardé en local, hors dépôt)
+skill/
+
 # Fichiers temporaires d'écriture des JSON
 data/*.tmp
 data/**/*.tmp
