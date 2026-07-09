@@ -21,7 +21,6 @@
 
   var FRAMES = parseInt(section.dataset.count, 10) || 192;
   var BASE   = section.dataset.frames;
-  var VID_W = 1280, VID_H = 720;
 
   var images = [];
   var lastFrame = -1;
@@ -85,8 +84,9 @@
     var img = images[idx];
     var cw = stickyEl.clientWidth, ch = stickyEl.clientHeight;
     if (!img || !img.complete || !img.naturalWidth) { lastFrame = idx; return; }
-    var scale = Math.max(cw / VID_W, ch / VID_H);
-    var w = VID_W * scale, h = VID_H * scale;
+    var iw = img.naturalWidth, ih = img.naturalHeight;
+    var scale = Math.max(cw / iw, ch / ih);
+    var w = iw * scale, h = ih * scale;
     ctx.clearRect(0, 0, cw, ch);
     ctx.drawImage(img, (cw - w) / 2, (ch - h) / 2, w, h);
     lastFrame = idx;

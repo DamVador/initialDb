@@ -121,7 +121,7 @@ Content::savePage('accueil', [
     ],
     'atouts' => [
         ['titre' => 'Une image à la hauteur de votre travail', 'texte' => 'Un site soigné inspire confiance et crédibilité, souvent avant même le premier contact.'],
-        ['titre' => 'Une présence qui vous appartient', 'texte' => 'Contrairement aux réseaux sociaux, votre site est à vous : pas d\'algorithme ni de règles qui changent du jour au lendemain.'],
+        ['titre' => 'Tout votre univers au même endroit', 'texte' => 'Vos services, vos réalisations et vos coordonnées réunis sur un espace clair et professionnel, pensé pour convaincre.'],
         ['titre' => 'Disponible en permanence', 'texte' => 'Votre site informe et rassure vos visiteurs 24h/24, même quand vous êtes fermé.'],
         ['titre' => 'Du sur-mesure, pensé pour vous', 'texte' => 'Chaque site est conçu pour votre activité et votre image, jamais décliné d\'un modèle générique.'],
     ],

@@ -13,9 +13,12 @@ SRC="assets/video/car-drive-out.mp4"
 OUT="assets/video/frames-out"
 QUALITY=70   # qualité WebP (0-100)
 
-echo "→ Extraction PNG temporaires…"
+# Recadrage pour retirer les bandes noires de la source (cf. cropdetect).
+CROP="crop=1280:666:0:26"
+
+echo "→ Extraction PNG temporaires (recadrées)…"
 TMP="$(mktemp -d)"
-ffmpeg -y -loglevel error -i "$SRC" -vf "scale=1280:720:flags=lanczos" "$TMP/frame-%04d.png"
+ffmpeg -y -loglevel error -i "$SRC" -vf "$CROP" "$TMP/frame-%04d.png"
 
 echo "→ Conversion en WebP (q$QUALITY)…"
 mkdir -p "$OUT"
