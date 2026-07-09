@@ -6,7 +6,7 @@ $on = fn(string $s): string => $seg === $s ? ' class="on" aria-current="page"' :
 ?>
 <nav class="navbar">
   <div class="wrap navbar-inner">
-    <a href="<?= url('') ?>" class="brand-logo" aria-label="<?= e($settings['site_name'] ?? 'Initial Db') ?> — accueil"></a>
+    <a href="<?= url('') ?>" class="brand-logo" aria-label="<?= e($settings['site_name'] ?? 'Initial Db') ?>, accueil"></a>
     <div class="navbar-links" id="menu-mobile">
       <a href="<?= url('offres') ?>"<?= $on('offres') ?>>Offres</a>
       <a href="<?= url('projets') ?>"<?= $on('projets') ?>>Réalisations</a>

@@ -108,7 +108,7 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 .offre p.desc{color:var(--gris-clair);flex:1;margin-bottom:2rem;font-size:.98rem}
 .offre ul{list-style:none;margin-bottom:2rem;display:flex;flex-direction:column;gap:.6rem}
 .offre li{font-size:.92rem;color:var(--gris-clair);display:flex;gap:.6em;font-family:var(--display)}
-.offre li::before{content:'—';color:var(--rouge)}
+.offre li::before{content:'';flex:0 0 auto;width:14px;height:2px;margin-top:.62em;background:var(--rouge)}
 .offre .cta,.offre .cta-dark{align-self:flex-start}
 .cta-dark{display:inline-flex;align-items:center;gap:.6em;border:1px solid var(--gris);color:var(--blanc);font-family:var(--display);font-size:.85rem;padding:.9em 1.6em;transition:all .18s ease}
 .cta-dark::after{content:'→'}
@@ -276,7 +276,7 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 .page-cta{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
 .liste-inclus{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin:0 0 2.5rem;font-size:1.02rem}
 .liste-inclus li{display:flex;gap:.7em}
-.liste-inclus li::before{content:'—';color:var(--rouge)}
+.liste-inclus li::before{content:'';flex:0 0 auto;width:14px;height:2px;margin-top:.62em;background:var(--rouge)}
 
 /* ─── Section tarifs (accueil) : 997 à gauche + options à droite ─── */
 .grille-tarif{display:grid;grid-template-columns:1.4fr 1fr;gap:1.5rem;align-items:start}
@@ -287,7 +287,7 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 .offre--principale .desc{color:var(--gris-clair);margin-bottom:2rem;font-size:.98rem}
 .offre--principale ul{list-style:none;margin-bottom:2rem;display:flex;flex-direction:column;gap:.6rem}
 .offre--principale li{font-size:.94rem;color:var(--gris-clair);display:flex;gap:.6em}
-.offre--principale li::before{content:'—';color:var(--rouge)}
+.offre--principale li::before{content:'';flex:0 0 auto;width:14px;height:2px;margin-top:.62em;background:var(--rouge)}
 .offre--principale .cta{align-self:flex-start}
 
 .options{background:var(--noir-doux);border:1px solid var(--ligne-sombre);padding:2.2rem}
@@ -357,7 +357,7 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 /* Sections claires : légère teinte rouge en coin → jamais un blanc plat */
 .probleme{background:radial-gradient(120% 90% at 100% 0,rgba(225,6,0,.035),transparent 42%),var(--blanc)}
 .process{background:radial-gradient(110% 90% at 0 0,rgba(225,6,0,.03),transparent 42%),var(--blanc)}
-.signature{background:radial-gradient(90% 80% at 0 100%,rgba(225,6,0,.045),transparent 48%),var(--blanc)}
+.signature{background:radial-gradient(90% 80% at 0 100%,rgba(225,6,0,.05),transparent 48%),var(--gris-bg)}
 .garage{background:linear-gradient(180deg,var(--gris-bg),#EAEAEE)}
 
 /* Filet de séparation discret entre sections claires successives */

@@ -101,24 +101,24 @@
     "signature": {
         "eyebrow": "Pourquoi Initial Db",
         "titre": "Ce qui fait la différence.",
-        "texte": "Un studio à taille humaine, concentré sur une seule chose : que votre site vous rapporte des clients."
+        "texte": "Un site, ce n'est pas qu'une carte de visite en ligne : c'est votre crédibilité, une présence qui travaille pour vous en continu, et un outil taillé pour votre activité."
     },
     "atouts": [
         {
-            "titre": "En direct, sans intermédiaire",
-            "texte": "Vous parlez directement au studio qui conçoit votre site. Pas d'agence ni de commercial entre vous et le travail."
+            "titre": "Une image à la hauteur de votre travail",
+            "texte": "Un site soigné inspire confiance et crédibilité, souvent avant même le premier contact."
         },
         {
-            "titre": "La performance avant tout",
-            "texte": "Chaque site est optimisé pour la vitesse et le référencement, pas seulement pour faire joli — c'est ce qui attire vraiment les clients."
+            "titre": "Une présence qui vous appartient",
+            "texte": "Contrairement aux réseaux sociaux, votre site est à vous : pas d'algorithme ni de règles qui changent du jour au lendemain."
         },
         {
-            "titre": "Du sur-mesure, jamais de modèle tout fait",
-            "texte": "Votre site est conçu pour votre activité et votre image, pas décliné d'un template générique."
+            "titre": "Disponible en permanence",
+            "texte": "Votre site informe et rassure vos visiteurs 24h/24, même quand vous êtes fermé."
         },
         {
-            "titre": "Un accompagnement clair",
-            "texte": "Du premier échange à la mise en ligne, vous savez toujours où en est votre projet — et le studio reste disponible ensuite."
+            "titre": "Du sur-mesure, pensé pour vous",
+            "texte": "Chaque site est conçu pour votre activité et votre image, jamais décliné d'un modèle générique."
         }
     ],
     "contact": {

@@ -1,6 +1,6 @@
 <?php
 /* ============================================================
-   scripts/seed.php — remplit le site avec des données de départ.
+   scripts/seed.php : remplit le site avec des données de départ.
 
    À lancer UNE SEULE FOIS :  php scripts/seed.php
    ⚠️  Écrase le contenu existant (accueil, articles, offres…).
@@ -116,13 +116,13 @@ Content::savePage('accueil', [
     'signature' => [
         'eyebrow' => 'Pourquoi Initial Db',
         'titre'   => 'Ce qui fait la différence.',
-        'texte'   => 'Un studio à taille humaine, concentré sur une seule chose : que votre site vous rapporte des clients.',
+        'texte'   => 'Un site, ce n\'est pas qu\'une carte de visite en ligne : c\'est votre crédibilité, une présence qui travaille pour vous en continu, et un outil taillé pour votre activité.',
     ],
     'atouts' => [
-        ['titre' => 'En direct, sans intermédiaire', 'texte' => 'Vous parlez directement au studio qui conçoit votre site. Pas d\'agence ni de commercial entre vous et le travail.'],
-        ['titre' => 'La performance avant tout', 'texte' => 'Chaque site est optimisé pour la vitesse et le référencement, pas seulement pour faire joli — c\'est ce qui attire vraiment les clients.'],
-        ['titre' => 'Du sur-mesure, jamais de modèle tout fait', 'texte' => 'Votre site est conçu pour votre activité et votre image, pas décliné d\'un template générique.'],
-        ['titre' => 'Un accompagnement clair', 'texte' => 'Du premier échange à la mise en ligne, vous savez toujours où en est votre projet — et le studio reste disponible ensuite.'],
+        ['titre' => 'Une image à la hauteur de votre travail', 'texte' => 'Un site soigné inspire confiance et crédibilité, souvent avant même le premier contact.'],
+        ['titre' => 'Une présence qui vous appartient', 'texte' => 'Contrairement aux réseaux sociaux, votre site est à vous : pas d\'algorithme ni de règles qui changent du jour au lendemain.'],
+        ['titre' => 'Disponible en permanence', 'texte' => 'Votre site informe et rassure vos visiteurs 24h/24, même quand vous êtes fermé.'],
+        ['titre' => 'Du sur-mesure, pensé pour vous', 'texte' => 'Chaque site est conçu pour votre activité et votre image, jamais décliné d\'un modèle générique.'],
     ],
     'contact' => [
         'eyebrow'   => 'Ligne de départ',
@@ -144,14 +144,14 @@ Content::savePage('articles-index', [
     'eyebrow'         => 'Le blog',
     'title'           => 'Conseils pour votre présence en ligne',
     'intro'           => 'Des articles concrets pour attirer plus de clients grâce à votre site : visibilité, référencement local et conversion.',
-    'seo_title'       => 'Blog — conseils web pour commerçants et PME · Initial Db',
+    'seo_title'       => 'Blog : conseils web pour commerçants et PME · Initial Db',
     'seo_description' => 'Articles pratiques sur les sites vitrines, le SEO local et la conversion, pour les artisans, commerçants et PME.',
 ]);
 Content::savePage('projets-index', [
-    'eyebrow'         => 'Le garage',
+    'eyebrow'         => 'Portfolio',
     'title'           => 'Nos réalisations',
     'intro'           => 'Une sélection de sites conçus pour des commerces et PME, avec de vrais résultats à la clé.',
-    'seo_title'       => 'Réalisations — sites vitrines sur-mesure · Initial Db',
+    'seo_title'       => 'Réalisations : sites vitrines sur-mesure · Initial Db',
     'seo_description' => 'Découvrez les sites vitrines réalisés par Initial Db pour des commerçants et PME, et leurs résultats.',
 ]);
 
@@ -183,7 +183,7 @@ Content::saveCollection('articles', [
         'date'    => '2026-05-10',
         'excerpt' => 'Faut-il un site quand on a déjà Instagram ? La réponse tient en un mot : vous.',
         'cover'   => '',
-        'body'    => "<p>Les réseaux sociaux sont loués : vous construisez sur un terrain qui ne vous appartient pas, avec des règles qui changent sans prévenir.</p><h2>Votre site, votre maison</h2><p>Un site vitrine est le seul espace que vous possédez vraiment. Il travaille pour vous 24h/24, sans algorithme entre vous et vos clients.</p><h2>Les deux, en réalité</h2><p>Le bon réflexe : les réseaux pour attirer et créer du lien, le site pour rassurer et convertir. L'un nourrit l'autre.</p><p>Commencez par la base solide — le site — puis faites-y converger votre audience.</p>",
+        'body'    => "<p>Les réseaux sociaux sont loués : vous construisez sur un terrain qui ne vous appartient pas, avec des règles qui changent sans prévenir.</p><h2>Votre site, votre maison</h2><p>Un site vitrine est le seul espace que vous possédez vraiment. Il travaille pour vous 24h/24, sans algorithme entre vous et vos clients.</p><h2>Les deux, en réalité</h2><p>Le bon réflexe : les réseaux pour attirer et créer du lien, le site pour rassurer et convertir. L'un nourrit l'autre.</p><p>Commencez par la base solide, le site, puis faites-y converger votre audience.</p>",
         'seo_title'       => 'Site vitrine ou réseaux sociaux : où investir en premier ?',
         'seo_description' => 'Instagram ne suffit pas. Découvrez pourquoi un site vitrine reste la base d\'une présence en ligne qui vous appartient.',
     ], 2, true),
