@@ -1,0 +1,31 @@
+/* ============================================================
+   TOKENS — variables de design (couleurs, polices, espacements)
+   Un seul endroit pour ajuster l'identité visuelle du site.
+   ============================================================ */
+
+:root{
+  /* ---- Couleurs ---- */
+  --noir:#0C0C0E;          /* fond sombre principal */
+  --noir-doux:#161619;     /* fond sombre secondaire (cartes, sections) */
+  --blanc:#FAFAFA;         /* fond clair principal (blanc cassé) */
+  --blanc-pur:#FFFFFF;     /* texte sur rouge, aplats purs */
+  --gris:#71717A;          /* texte secondaire */
+  --gris-clair:#A1A1AA;    /* texte secondaire sur fond sombre */
+  --ligne:#E6E6EA;         /* filets/séparateurs sur fond clair */
+  --ligne-sombre:#26262B;  /* filets/séparateurs sur fond sombre */
+  --rouge:#E10600;         /* ACTION uniquement + petits accents (rare et précieux) */
+  --rouge-sombre:#B80500;  /* rouge au survol des CTA */
+
+  /* ---- Polices ---- */
+  --display:'Space Grotesk',system-ui,sans-serif; /* titres, labels, prix, boutons, nav */
+  --corps:'Inter',system-ui,sans-serif;           /* corps de texte */
+
+  /* ---- Mise en page ---- */
+  --max:1180px;                        /* largeur max du contenu */
+  --gout:clamp(1.25rem,5vw,3rem);      /* gouttière horizontale (padding des sections) */
+
+  /* ---- Logos (fichiers) ----
+     Le nom décrit le FOND sur lequel le logo est posé. */
+  --logo-sur-fond-sombre:url(../img/logo-fond-sombre.png); /* texte blanc — navbar, footer */
+  --logo-sur-fond-clair:url(../img/logo-fond-clair.png);   /* texte noir — sections claires */
+}
