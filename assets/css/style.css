@@ -133,54 +133,66 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 }
 .cta-ligne-clair:hover{color:var(--blanc);border-color:var(--gris)}
 
-/* ═══ MENTIONS LÉGALES ═══ */
-.mentions{background:var(--noir);color:var(--blanc);border-top:1px solid var(--ligne-sombre);padding-block:clamp(3.5rem,7vw,5rem)}
-.mentions-titre{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-block:.8rem 2.5rem;font-weight:600}
-.mentions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
-.mention-bloc h4{font-family:var(--display);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-bottom:1rem;font-weight:500}
-.mention-bloc p{color:var(--gris-clair);font-size:.95rem;line-height:1.8}
-.mention-bloc a{color:var(--gris-clair);border-bottom:1px solid var(--ligne-sombre);transition:color .15s ease}
-.mention-bloc a:hover{color:var(--blanc)}
-.pied-bas{display:flex;justify-content:space-between;align-items:center;margin-top:5rem;padding-top:2rem;border-top:1px solid var(--ligne-sombre);font-family:var(--display);font-size:.8rem;color:var(--gris)}
+/* ═══ MENTIONS LÉGALES (page dédiée) ═══ */
+.mentions-liste{display:flex;flex-direction:column;gap:2rem;margin-top:.5rem}
+.mention-item h2{font-family:var(--display);font-size:1.15rem;font-weight:600;margin-bottom:.5rem}
+.mention-item p{color:var(--gris);line-height:1.8}
+.mention-item a{color:var(--rouge);border-bottom:1px solid var(--rouge)}
 
-/* ═══ NAVBAR STICKY ═══ */
+/* ═══ NAVBAR ═══ */
 .navbar{
   position:sticky;top:0;z-index:100;
-  background:rgba(12,12,14,.8);backdrop-filter:blur(12px);
+  background:rgba(12,12,14,.82);backdrop-filter:blur(14px);
   border-bottom:1px solid var(--ligne-sombre);
-  transition:background .2s ease;
 }
-.navbar-inner{display:flex;justify-content:space-between;align-items:center;height:64px}
-.navbar-links{display:flex;gap:2.2rem;align-items:center}
-.navbar-links a{font-family:var(--display);font-size:.98rem;color:var(--gris-clair);transition:color .15s ease}
-.navbar-links a:hover{color:var(--blanc)}
+.navbar-inner{display:flex;justify-content:space-between;align-items:center;height:72px;gap:2rem}
+.navbar .brand-logo{height:30px;width:98px}
+.navbar-links{display:flex;gap:2.3rem;align-items:center}
+.navbar-links a{
+  position:relative;font-family:var(--display);font-size:1rem;font-weight:500;
+  color:var(--gris-clair);transition:color .15s ease;padding-block:.35rem;
+}
+.navbar-links a:not(.navbar-cta)::after{
+  content:'';position:absolute;left:0;right:100%;bottom:-2px;height:2px;
+  background:var(--rouge);transition:right .2s ease;
+}
+.navbar-links a:not(.navbar-cta):hover{color:var(--blanc)}
+.navbar-links a:not(.navbar-cta):hover::after{right:0}
+.navbar-links a.on{color:var(--blanc)}
+.navbar-links a.on::after{right:0}
 .navbar-cta{
-  font-family:var(--display);font-size:.98rem;color:var(--blanc)!important;
-  border:1px solid var(--gris);padding:.5em 1.15em;transition:all .18s ease;
+  margin-left:.5rem;background:var(--rouge);color:#fff!important;
+  font-family:var(--display);font-weight:500;font-size:.95rem;
+  padding:.62em 1.3em;transition:background .18s ease,transform .18s ease;
 }
-.navbar-cta:hover{background:var(--rouge);border-color:var(--rouge)}
+.navbar-cta:hover{background:var(--rouge-sombre);transform:translateY(-1px)}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem}
 .burger span{width:22px;height:2px;background:var(--blanc);transition:.2s}
 
-/* ═══ FOOTER COMPLET ═══ */
-.site-footer{background:var(--noir);color:var(--blanc);padding-block:clamp(4rem,8vw,6rem) 2.5rem}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:4rem;border-bottom:1px solid var(--ligne-sombre)}
-.footer-brand p{color:var(--gris);font-size:.92rem;margin-top:1rem;max-width:32ch;line-height:1.6}
+/* ═══ FOOTER ═══ */
+.site-footer{background:var(--noir);color:var(--blanc);padding-block:clamp(3.5rem,7vw,5rem) 2.5rem}
+.footer-cta{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;padding-bottom:3rem;margin-bottom:3rem;border-bottom:1px solid var(--ligne-sombre)}
+.footer-cta h2{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;line-height:1.1}
+.footer-cta p{color:var(--gris-clair);margin-top:.4rem}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1.2fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid var(--ligne-sombre)}
+.footer-brand .brand-logo{height:40px;width:126px}
+.footer-brand p{color:var(--gris);font-size:.92rem;margin-top:1.2rem;max-width:34ch;line-height:1.7}
 .footer-brand .statut-badge{
   display:inline-flex;align-items:center;gap:.5em;margin-top:1.5rem;
-  font-family:var(--display);font-size:.75rem;color:var(--gris-clair);
+  font-family:var(--display);font-size:.78rem;color:var(--gris-clair);
 }
 .footer-brand .dot{width:7px;height:7px;border-radius:50%;background:#22C55E;box-shadow:0 0 8px #22C55E}
 .footer-col h4{font-family:var(--display);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);margin-bottom:1.2rem;font-weight:500}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
-.footer-col a{color:var(--gris-clair);font-size:.92rem;transition:color .15s ease}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.footer-col a{color:var(--gris-clair);font-size:.93rem;transition:color .15s ease}
 .footer-col a:hover{color:var(--blanc)}
-.footer-col a.rouge:hover{color:var(--rouge)}
-.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;flex-wrap:wrap;gap:1rem}
-.footer-bottom .copy{font-family:var(--display);font-size:.78rem;color:var(--gris)}
+.footer-col a.rouge{color:var(--rouge)}
+.footer-col a.rouge:hover{color:var(--rouge-sombre)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:2.5rem;flex-wrap:wrap;gap:1rem}
+.footer-bottom .copy{font-family:var(--display);font-size:.8rem;color:var(--gris)}
 .footer-bottom .legal{display:flex;gap:1.5rem}
-.footer-bottom .legal a{font-family:var(--display);font-size:.78rem;color:var(--gris);transition:color .15s ease}
-.footer-bottom .legal a:hover{color:var(--gris-clair)}
+.footer-bottom .legal a{font-family:var(--display);font-size:.8rem;color:var(--gris);transition:color .15s ease}
+.footer-bottom .legal a:hover{color:var(--blanc)}
 
 @media(max-width:800px){
   .benefices,.grille-offres,.grille-projets,.timeline{grid-template-columns:1fr}

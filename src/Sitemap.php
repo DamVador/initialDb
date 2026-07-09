@@ -24,6 +24,7 @@ class Sitemap
         $urls[] = ['loc' => url('')];
         $urls[] = ['loc' => url('articles')];
         $urls[] = ['loc' => url('projets')];
+        $urls[] = ['loc' => url('mentions-legales')];
 
         // Collections publiées → une URL par entrée.
         foreach (Schema::collections() as $name => $def) {

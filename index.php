@@ -168,6 +168,16 @@ switch ($route) {
         route_collection_page('secteurs', 'Secteurs d\'activité', $segments[1] ?? null);
         break;
 
+    /* Mentions légales */
+    case 'mentions-legales':
+        front('mentions', [], [
+            'title' => 'Mentions légales — ' . (Content::settings()['site_name'] ?? 'Initial Db'),
+        ], [
+            ['label' => 'Accueil', 'url' => url('')],
+            ['label' => 'Mentions légales'],
+        ]);
+        break;
+
     default:
         not_found();
 }
