@@ -149,6 +149,7 @@ class Schema
                     'process' => ['type' => 'group', 'label' => 'Section méthode', 'fields' => [
                         'eyebrow' => ['type' => 'text', 'label' => 'Sur-titre'],
                         'titre'   => ['type' => 'text', 'label' => 'Titre'],
+                        'sous'    => ['type' => 'textarea', 'label' => 'Sous-titre'],
                     ]],
                     'etapes' => ['type' => 'repeater', 'label' => 'Étapes de la méthode', 'item_label' => 'Étape', 'fields' => [
                         'step'  => ['type' => 'text', 'label' => 'Numéro', 'help' => 'ex. Étape 01'],

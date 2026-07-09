@@ -15,6 +15,10 @@ dist/
 .env
 .env.*
 
+# Captures d'écran / harnais de test (hors site)
+Capture d’écran*.png
+_captest.html
+
 # Fichiers temporaires d'écriture des JSON
 data/*.tmp
 data/**/*.tmp

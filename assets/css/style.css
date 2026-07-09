@@ -381,3 +381,48 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 @media(prefers-reduced-motion:reduce){
   .js-reveal .reveal{opacity:1!important;transform:none!important;transition:none}
 }
+
+/* ═══════════════════════════════════════════════════════════
+   SECTION MÉTHODE — vidéo au défilement (scrollytelling)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ---- Base = repli (mobile, sans JS, prefers-reduced-motion) ---- */
+.methode{position:relative;padding:0;color:var(--blanc);background:#0a0a0c}
+.methode::before{content:'';position:absolute;inset:0;
+  background:linear-gradient(rgba(8,8,10,.72),rgba(8,8,10,.86)),url(../video/frames-out/frame-0001.webp) center/cover;
+  z-index:0}
+.methode-canvas,.methode-scrim{display:none}
+.methode-stage{position:relative;z-index:1;padding-block:clamp(4.5rem,10vw,7.5rem)}
+.methode:not(.is-scrolly) .methode-stage{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2rem;align-items:start}
+.methode:not(.is-scrolly) .methode-titre{grid-column:1 / -1}
+.methode-titre{max-width:640px;margin-bottom:1rem}
+.methode-titre .titre{font-size:clamp(1.9rem,4.5vw,3.2rem)}
+.methode-sous{color:var(--gris-clair);margin-top:1rem;font-size:1.05rem;line-height:1.55}
+.methode-etape .step{font-family:var(--display);font-size:.75rem;color:var(--rouge);letter-spacing:.1em}
+.methode-etape .t-titre{font-family:var(--display);font-weight:600;font-size:1.4rem;display:block;margin-block:.5rem .5rem}
+.methode-etape p{color:var(--gris-clair);font-size:.96rem;line-height:1.55}
+.methode:not(.is-scrolly) .methode-etape{border-top:2px solid var(--rouge);padding-top:1.3rem}
+@media(max-width:800px){
+  .methode:not(.is-scrolly) .methode-stage{grid-template-columns:1fr;gap:2.5rem}
+}
+
+/* ---- Mode actif : épinglé + canvas piloté au scroll ---- */
+.methode.is-scrolly{background:#000}
+.methode.is-scrolly::before{display:none}
+.methode.is-scrolly .methode-scroll{position:relative;height:300vh}
+.methode.is-scrolly .methode-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
+.methode.is-scrolly .methode-canvas{display:block;position:absolute;inset:0;width:100%;height:100%}
+.methode.is-scrolly .methode-scrim{display:block;position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.55),transparent 22%,transparent 68%,rgba(0,0,0,.65)),
+    radial-gradient(120% 90% at 50% 50%,transparent 45%,rgba(0,0,0,.5) 100%)}
+.methode.is-scrolly .methode-stage{position:absolute;inset:0;padding:0;max-width:none;margin:0}
+
+.methode.is-scrolly .methode-titre{position:absolute;top:11%;left:50%;transform:translateX(-50%);
+  text-align:center;max-width:min(90%,640px);margin:0}
+.methode.is-scrolly .methode-etape{position:absolute;opacity:0;max-width:min(82%,330px);margin:0;
+  padding:1.15rem 1.3rem;background:rgba(10,10,12,.5);backdrop-filter:blur(6px);
+  border-left:2px solid var(--rouge);will-change:opacity,transform}
+.methode.is-scrolly .pos-1{left:6%;top:57%}   /* étape 1 : gauche, bas */
+.methode.is-scrolly .pos-2{left:6%;top:29%}   /* étape 2 : gauche, haut */
+.methode.is-scrolly .pos-3{right:6%;top:43%}  /* étape 3 : droite */

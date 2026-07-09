@@ -112,20 +112,31 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
   </div>
 </section>
 
-<!-- MÉTHODE -->
-<section id="process" class="process">
-  <div class="wrap">
-    <span class="eyebrow"><?= e($process['eyebrow'] ?? '') ?></span>
-    <h2 class="titre"><?= e($process['titre'] ?? '') ?></h2>
-    <ol class="timeline">
-      <?php foreach (($page['etapes'] ?? []) as $et): ?>
-      <li>
-        <span class="step"><?= e($et['step'] ?? '') ?></span>
-        <span class="t-titre"><?= e($et['title'] ?? '') ?></span>
-        <p><?= e($et['text'] ?? '') ?></p>
-      </li>
-      <?php endforeach; ?>
-    </ol>
+<!-- MÉTHODE (effet vidéo au scroll) -->
+<?php $etapes = $page['etapes'] ?? []; ?>
+<section id="process" class="methode" data-methode data-frames="<?= url('assets/video/frames-out') ?>" data-count="192">
+  <div class="methode-scroll">
+    <div class="methode-sticky">
+      <canvas class="methode-canvas" aria-hidden="true"></canvas>
+      <div class="methode-scrim" aria-hidden="true"></div>
+      <div class="methode-stage wrap">
+
+        <div class="methode-titre" data-methode-titre>
+          <span class="eyebrow"><?= e($process['eyebrow'] ?? '') ?></span>
+          <h2 class="titre"><?= e($process['titre'] ?? '') ?></h2>
+          <?php if (!empty($process['sous'])): ?><p class="methode-sous"><?= e($process['sous']) ?></p><?php endif; ?>
+        </div>
+
+        <?php foreach ($etapes as $i => $et): ?>
+        <article class="methode-etape pos-<?= $i + 1 ?>" data-methode-etape="<?= $i ?>">
+          <span class="step"><?= e($et['step'] ?? '') ?></span>
+          <span class="t-titre"><?= e($et['title'] ?? '') ?></span>
+          <p><?= e($et['text'] ?? '') ?></p>
+        </article>
+        <?php endforeach; ?>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -164,3 +175,5 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
     </div>
   </div>
 </section>
+
+<script src="<?= url('assets/js/methode.js') ?>" defer></script>

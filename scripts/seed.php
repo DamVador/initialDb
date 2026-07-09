@@ -107,6 +107,7 @@ Content::savePage('accueil', [
     'process' => [
         'eyebrow' => 'La méthode',
         'titre'   => 'En trois étapes.',
+        'sous'    => 'De la première discussion à la mise en ligne, un parcours clair et sans surprise.',
     ],
     'etapes' => [
         ['step' => 'Étape 01', 'title' => 'Brief', 'text' => 'On cadre l\'objectif business, la cible et les mots-clés locaux qui comptent.'],

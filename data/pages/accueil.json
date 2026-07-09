@@ -79,7 +79,8 @@
     },
     "process": {
         "eyebrow": "La méthode",
-        "titre": "En trois étapes."
+        "titre": "En trois étapes.",
+        "sous": "De la première discussion à la mise en ligne, un parcours clair et sans surprise."
     },
     "etapes": [
         {
