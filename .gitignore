@@ -28,3 +28,6 @@ data/**/*.tmp
 
 # Mot de passe admin (hash) : généré par scripts/seed.php, ne pas versionner
 data/auth.json
+
+# Documentation interne (infos confidentielles) : gardée en local, hors dépôt
+README.md
