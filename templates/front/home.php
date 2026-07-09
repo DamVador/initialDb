@@ -50,7 +50,7 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
 </section>
 
 <!-- TARIFS -->
-<section id="offres" class="dark offres">
+<section id="offres" class="offres">
   <div class="wrap">
     <span class="eyebrow"><?= e($offres['eyebrow'] ?? '') ?></span>
     <h2 class="titre"><?= e($offres['titre'] ?? '') ?></h2>

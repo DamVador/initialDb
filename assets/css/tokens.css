@@ -8,10 +8,12 @@
   --noir:#0C0C0E;          /* fond sombre principal */
   --noir-doux:#161619;     /* fond sombre secondaire (cartes, sections) */
   --blanc:#FAFAFA;         /* fond clair principal (blanc cassé) */
+  --gris-bg:#F0F0F3;       /* fond clair secondaire — casse l'alternance sans passer au noir */
   --blanc-pur:#FFFFFF;     /* texte sur rouge, aplats purs */
   --gris:#71717A;          /* texte secondaire */
   --gris-clair:#A1A1AA;    /* texte secondaire sur fond sombre */
   --ligne:#E6E6EA;         /* filets/séparateurs sur fond clair */
+  --ligne-forte:#C9C9D0;   /* bordure marquée (boutons secondaires sur fond clair) */
   --ligne-sombre:#26262B;  /* filets/séparateurs sur fond sombre */
   --rouge:#E10600;         /* ACTION uniquement + petits accents (rare et précieux) */
   --rouge-sombre:#B80500;  /* rouge au survol des CTA */

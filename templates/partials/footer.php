@@ -9,14 +9,6 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
 ?>
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-cta">
-      <div>
-        <h2>Un projet en tête ?</h2>
-        <p>Parlons-en. Réponse rapide, sans engagement.</p>
-      </div>
-      <a href="<?= url('') ?>#contact" class="cta">Démarrer un projet</a>
-    </div>
-
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="brand-logo" role="img" aria-label="<?= e($siteName) ?>"></span>
