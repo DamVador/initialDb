@@ -101,8 +101,8 @@
 
   /* ---- Chorégraphie des étapes ---- */
   function layout(p) {
-    // Titre : visible dès le tout début.
-    if (titre) titre.style.opacity = clamp(p / 0.05, 0, 1);
+    // Titre + sous-titre : toujours affichés pendant toute la section.
+    if (titre) titre.style.opacity = 1;
 
     var n = etapes.length || 1;
     var startPhase = 0.08, endPhase = 0.72;

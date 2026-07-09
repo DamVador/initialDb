@@ -406,7 +406,7 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 
 /* ---- Mode actif : épinglé + canvas piloté au scroll ---- */
 .methode.is-scrolly{background:#000}
-.methode.is-scrolly .methode-scroll{position:relative;height:240vh}
+.methode.is-scrolly .methode-scroll{position:relative;height:320vh}
 .methode.is-scrolly .methode-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
 .methode.is-scrolly .methode-canvas{display:block;position:absolute;inset:0;width:100%;height:100%}
 /* Voile léger : juste ce qu'il faut pour lire le titre en haut, pas de bande noire */
