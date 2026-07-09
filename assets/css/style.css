@@ -51,7 +51,7 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 
 /* ═══ HERO ═══ */
 .hero{position:relative;overflow:hidden;min-height:92vh;display:flex;flex-direction:column;isolation:isolate;
-  background:linear-gradient(180deg,rgba(12,12,14,.90),rgba(12,12,14,.95)),url(../img/route-montagne.png) center/cover no-repeat}
+  background:linear-gradient(180deg,rgba(12,12,14,.76),rgba(12,12,14,.84)),url(../img/abstract-tunnel.png) center/cover no-repeat}
 /* Couche 1 : halos rouges ambiants */
 .hero::before{
   content:'';position:absolute;inset:0;z-index:-2;pointer-events:none;
