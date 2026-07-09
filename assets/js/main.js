@@ -41,4 +41,37 @@
   window.addEventListener('resize', function () {
     if (window.innerWidth > 800) ouvrirFermer(false);
   });
+
+  /* ---- Révélation douce au défilement ---- */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-reveal');
+
+    var selectors = [
+      '.benef', '.atout', '.carte', '.carte-article', '.carte-simple',
+      '.timeline li', '.grille-tarif', '.signature-tete', '.page-hero'
+    ];
+    var els = document.querySelectorAll(selectors.join(','));
+
+    // Petit décalage en cascade entre éléments voisins d'un même bloc.
+    var counters = new Map();
+    els.forEach(function (el) {
+      el.classList.add('reveal');
+      var parent = el.parentElement;
+      var n = counters.get(parent) || 0;
+      counters.set(parent, n + 1);
+      el.style.transitionDelay = Math.min(n * 0.07, 0.35) + 's';
+    });
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
+
+    els.forEach(function (el) { io.observe(el); });
+  }
 })();

@@ -50,13 +50,13 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
 </section>
 
 <!-- TARIFS -->
-<section id="offres" class="offres">
+<section id="offres" class="dark offres">
   <div class="wrap">
     <span class="eyebrow"><?= e($offres['eyebrow'] ?? '') ?></span>
     <h2 class="titre"><?= e($offres['titre'] ?? '') ?></h2>
     <?php if (!empty($offres['sous'])): ?><p class="sous"><?= e($offres['sous']) ?></p><?php endif; ?>
     <div class="grille-tarif">
-      <div class="offre offre--principale">
+      <div class="offre offre--principale fine-border">
         <span class="offre-nom"><?= e($offres['offer_name'] ?? '') ?></span>
         <span class="prix"><?= e($offres['offer_price'] ?? '') ?> <span>€</span></span>
         <?php if (!empty($offres['offer_desc'])): ?><p class="desc"><?= e($offres['offer_desc']) ?></p><?php endif; ?>
@@ -66,7 +66,7 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
         <a href="#contact" class="cta"><?= e($offres['cta_label'] ?? 'Choisir cette formule') ?></a>
       </div>
       <?php if (!empty($page['options'])): ?>
-      <aside class="options">
+      <aside class="options fine-border">
         <h3 class="options-titre">Options à la carte</h3>
         <ul class="options-liste">
           <?php foreach ($page['options'] as $opt): ?>

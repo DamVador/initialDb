@@ -10,7 +10,7 @@
   --blanc:#FAFAFA;         /* fond clair principal (blanc cassé) */
   --gris-bg:#F0F0F3;       /* fond clair secondaire — casse l'alternance sans passer au noir */
   --blanc-pur:#FFFFFF;     /* texte sur rouge, aplats purs */
-  --gris:#71717A;          /* texte secondaire */
+  --gris:#5F5F67;          /* texte secondaire (assez foncé pour rester lisible sur fond clair) */
   --gris-clair:#A1A1AA;    /* texte secondaire sur fond sombre */
   --ligne:#E6E6EA;         /* filets/séparateurs sur fond clair */
   --ligne-forte:#C9C9D0;   /* bordure marquée (boutons secondaires sur fond clair) */
