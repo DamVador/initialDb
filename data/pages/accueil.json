@@ -1,0 +1,111 @@
+{
+    "hero": {
+        "eyebrow": "Studio digital",
+        "h1_before": "Studio digital de création de sites web",
+        "h1_em": "sur-mesure",
+        "h1_after": ", adaptés à votre image.",
+        "subtitle": "Des sites vitrines rapides, pensés pour convertir.",
+        "accroche": "Pour les artisans, commerçants et les PME qui veulent une présence web irréprochable : design premium, référencement local, et une vraie mécanique de conversion.",
+        "cta_label": "Démarrer le projet"
+    },
+    "meta": [
+        {
+            "value": "100",
+            "label": "Score Lighthouse"
+        },
+        {
+            "value": "< 1s",
+            "label": "Temps de chargement"
+        },
+        {
+            "value": "SEO",
+            "label": "Local optimisé"
+        }
+    ],
+    "probleme": {
+        "eyebrow": "Le constat",
+        "titre_before": "Un beau commerce,",
+        "titre_em": "invisible",
+        "titre_after": " en ligne."
+    },
+    "benefices": [
+        {
+            "num": "01",
+            "title": "Acquisition",
+            "text": "Vous sortez de la page trois. Les clients du quartier vous trouvent enfin quand ils cherchent."
+        },
+        {
+            "num": "02",
+            "title": "SEO local",
+            "text": "Données structurées, fiche Google, pages de service : la mécanique complète du référencement de proximité."
+        },
+        {
+            "num": "03",
+            "title": "Conversion",
+            "text": "Un site rapide et clair qui transforme la visite en demande de devis ou en réservation."
+        }
+    ],
+    "offres": {
+        "eyebrow": "La grille",
+        "titre": "Une formule claire, des options à la carte.",
+        "sous": "Le site vitrine complet, puis vous ajoutez seulement ce dont vous avez besoin.",
+        "offer_name": "Site vitrine",
+        "offer_price": "997",
+        "offer_desc": "Le site vitrine professionnel, complet et prêt à convertir.",
+        "offer_features": [
+            "Site vitrine sur-mesure",
+            "Ultra-rapide, score Lighthouse 100",
+            "SEO local optimisé",
+            "Design premium responsive"
+        ],
+        "cta_label": "Choisir cette formule"
+    },
+    "options": [
+        {
+            "title": "Animation 3D",
+            "price": "500 €",
+            "note": "Expérience vidéo 3D au scroll, effet « waouh »."
+        },
+        {
+            "title": "Référencement (SEO)",
+            "price": "180 €/mois",
+            "note": "4 articles de blog optimisés rédigés par mois."
+        }
+    ],
+    "garage": {
+        "eyebrow": "Le garage",
+        "titre": "Sorties d'atelier.",
+        "sous": "Quelques réalisations récentes."
+    },
+    "process": {
+        "eyebrow": "La mécanique",
+        "titre": "Trois temps."
+    },
+    "etapes": [
+        {
+            "step": "Étape 01",
+            "title": "Brief",
+            "text": "On cadre l'objectif business, la cible et les mots-clés locaux qui comptent."
+        },
+        {
+            "step": "Étape 02",
+            "title": "Design & Code",
+            "text": "Conception, développement et optimisation. Vous suivez l'avancée à chaque étape."
+        },
+        {
+            "step": "Étape 03",
+            "title": "Livraison",
+            "text": "Mise en ligne, transfert des accès, et vous êtes prêt à convertir."
+        }
+    ],
+    "contact": {
+        "eyebrow": "Ligne de départ",
+        "titre": "On lance votre projet ?",
+        "sous": "Réservez un appel de 30 minutes, ou écrivez-moi directement. Réponse rapide, sans engagement.",
+        "cta_label": "Réserver un appel"
+    },
+    "seo": {
+        "seo_title": "Initial Db · Studio digital de création de sites vitrines",
+        "seo_description": "Studio digital spécialisé dans les sites vitrines rapides et optimisés pour le référencement local des artisans, commerçants et PME."
+    }
+}

@@ -1,0 +1,9 @@
+# Le dossier data/ contient le contenu JSON et le hash du mot de passe.
+# Il ne doit JAMAIS être accessible directement par le web.
+Require all denied
+
+# Fallback pour Apache < 2.4
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

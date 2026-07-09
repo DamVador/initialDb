@@ -14,3 +14,10 @@ node_modules/
 dist/
 .env
 .env.*
+
+# Fichiers temporaires d'écriture des JSON
+data/*.tmp
+data/**/*.tmp
+
+# Mot de passe admin (hash) : généré par scripts/seed.php, ne pas versionner
+data/auth.json

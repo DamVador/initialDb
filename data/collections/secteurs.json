@@ -1,0 +1,30 @@
+{
+    "items": [
+        {
+            "id": "98960e58fdf2",
+            "order": 0,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "Restaurants",
+            "slug": "restaurants",
+            "intro": "Un site qui donne faim et remplit vos tables : menu à jour, réservation facile et présence locale au top.",
+            "body": "<p>Pour un restaurant, le site est souvent le premier contact. Il doit donner envie, informer en un coup d'œil et faciliter la réservation.</p><h2>Ce qui compte pour vous</h2><ul><li>Un menu toujours à jour, consultable sur mobile</li><li>La réservation en quelques secondes</li><li>Une fiche Google impeccable pour le « restaurant près de moi »</li></ul>",
+            "seo_title": "Création de site internet pour restaurant · Initial Db",
+            "seo_description": "Sites vitrines pour restaurants : menu à jour, réservation simple et référencement local pour remplir vos tables."
+        },
+        {
+            "id": "6fd4dd6c7ccb",
+            "order": 1,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "Artisans du bâtiment",
+            "slug": "artisans-batiment",
+            "intro": "Rassurez vos futurs clients et décrochez plus de chantiers grâce à un site qui met en avant votre savoir-faire.",
+            "body": "<p>Plombier, électricien, menuisier, maçon : vos clients cherchent en ligne avant d'appeler. Un site clair et rassurant fait la différence.</p><h2>Ce qui compte pour vous</h2><ul><li>Vos réalisations en photos, preuve de votre sérieux</li><li>Vos zones d'intervention et vos services</li><li>Un formulaire de demande de devis simple</li></ul>",
+            "seo_title": "Création de site internet pour artisan du bâtiment · Initial Db",
+            "seo_description": "Sites vitrines pour artisans du bâtiment : réalisations, zones d'intervention et demande de devis pour plus de chantiers."
+        }
+    ]
+}

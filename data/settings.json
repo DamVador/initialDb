@@ -1,0 +1,15 @@
+{
+    "site_name": "Initial Db",
+    "tagline": "Studio digital de création de sites vitrines",
+    "email": "contact@damienbanville-dev.fr",
+    "whatsapp": "33780942683",
+    "calendly": "https://calendly.com/contact-damienbanville-dev/30min",
+    "tiktok": "https://www.tiktok.com/@damien_dev",
+    "legal": {
+        "editeur": "Damien Banville",
+        "statut": "Développeur web freelance",
+        "siret": "89206207600013",
+        "ville": "Paris, France",
+        "hebergeur": "PlanetHoster"
+    }
+}

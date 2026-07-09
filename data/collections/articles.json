@@ -1,0 +1,49 @@
+{
+    "items": [
+        {
+            "id": "b2c8775845c8",
+            "order": 0,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "Pourquoi la vitesse de votre site fait gagner des clients",
+            "slug": "vitesse-site-gagner-clients",
+            "date": "2026-06-12",
+            "excerpt": "Un site lent, ce sont des visiteurs qui partent avant même de vous découvrir. Voici pourquoi chaque seconde compte.",
+            "cover": "",
+            "body": "<p>La majorité des visiteurs quittent une page qui met plus de trois secondes à s'afficher. Pour un commerce local, c'est une porte qui se referme avant même le bonjour.</p><h2>La vitesse, c'est de la confiance</h2><p>Un site rapide envoie un signal simple : c'est du sérieux. À l'inverse, un site qui rame donne l'impression d'un commerce négligé, même si la réalité est tout autre.</p><h2>Google récompense la rapidité</h2><p>Les moteurs de recherche placent plus haut les sites rapides. Résultat : plus de vitesse, c'est aussi plus de visibilité locale.</p><p>Chez Initial Db, chaque site vise un score de performance maximal, sans compromis sur le design.</p>",
+            "seo_title": "Vitesse d'un site web : pourquoi ça vous fait gagner des clients",
+            "seo_description": "Un site lent fait fuir vos visiteurs et vous pénalise sur Google. Découvrez pourquoi la vitesse est décisive pour un commerce local."
+        },
+        {
+            "id": "9b0fbe74d500",
+            "order": 1,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "SEO local : apparaître quand votre quartier vous cherche",
+            "slug": "seo-local-quartier",
+            "date": "2026-05-28",
+            "excerpt": "Vos futurs clients tapent « près de moi » sur Google. Voici comment faire pour que ce soit vous qu'ils trouvent.",
+            "cover": "",
+            "body": "<p>Le référencement local, c'est l'art d'être trouvé par les gens proches de vous, au moment où ils cherchent ce que vous proposez.</p><h2>La fiche Google, votre vitrine n°1</h2><p>Une fiche d'établissement complète et à jour est souvent le premier contact avec un client. Photos, horaires, avis : tout compte.</p><h2>Des pages pensées pour votre ville</h2><p>Un site bien structuré, avec les bons mots-clés locaux, indique clairement à Google où et pour qui vous travaillez.</p><p>C'est un travail de fond, mais c'est lui qui fait sonner le téléphone.</p>",
+            "seo_title": "SEO local : comment être trouvé par les clients de votre quartier",
+            "seo_description": "Fiche Google, mots-clés locaux, pages de service : le guide clair du référencement de proximité pour les commerces."
+        },
+        {
+            "id": "eaa97739f82f",
+            "order": 2,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "Site vitrine ou réseaux sociaux : par où commencer ?",
+            "slug": "site-vitrine-ou-reseaux-sociaux",
+            "date": "2026-05-10",
+            "excerpt": "Faut-il un site quand on a déjà Instagram ? La réponse tient en un mot : vous.",
+            "cover": "",
+            "body": "<p>Les réseaux sociaux sont loués : vous construisez sur un terrain qui ne vous appartient pas, avec des règles qui changent sans prévenir.</p><h2>Votre site, votre maison</h2><p>Un site vitrine est le seul espace que vous possédez vraiment. Il travaille pour vous 24h/24, sans algorithme entre vous et vos clients.</p><h2>Les deux, en réalité</h2><p>Le bon réflexe : les réseaux pour attirer et créer du lien, le site pour rassurer et convertir. L'un nourrit l'autre.</p><p>Commencez par la base solide — le site — puis faites-y converger votre audience.</p>",
+            "seo_title": "Site vitrine ou réseaux sociaux : où investir en premier ?",
+            "seo_description": "Instagram ne suffit pas. Découvrez pourquoi un site vitrine reste la base d'une présence en ligne qui vous appartient."
+        }
+    ]
+}

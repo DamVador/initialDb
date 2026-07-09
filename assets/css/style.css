@@ -152,11 +152,11 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 }
 .navbar-inner{display:flex;justify-content:space-between;align-items:center;height:64px}
 .navbar-links{display:flex;gap:2.2rem;align-items:center}
-.navbar-links a{font-family:var(--display);font-size:.82rem;color:var(--gris-clair);transition:color .15s ease}
+.navbar-links a{font-family:var(--display);font-size:.98rem;color:var(--gris-clair);transition:color .15s ease}
 .navbar-links a:hover{color:var(--blanc)}
 .navbar-cta{
-  font-family:var(--display);font-size:.82rem;color:var(--blanc)!important;
-  border:1px solid var(--gris);padding:.5em 1.1em;transition:all .18s ease;
+  font-family:var(--display);font-size:.98rem;color:var(--blanc)!important;
+  border:1px solid var(--gris);padding:.5em 1.15em;transition:all .18s ease;
 }
 .navbar-cta:hover{background:var(--rouge);border-color:var(--rouge)}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem}
@@ -207,3 +207,95 @@ section{padding-block:clamp(4.5rem,10vw,7.5rem)}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 :focus-visible{outline:2px solid var(--rouge);outline-offset:3px}
+
+/* ═══════════════════════════════════════════════════════════
+   COMPOSANTS AJOUTÉS (version PHP : pages intérieures, tarifs, listes)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Fil d'Ariane ─── */
+.fil-ariane{border-bottom:1px solid var(--ligne);background:var(--blanc)}
+.fil-ariane ol{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;padding-block:1rem;font-family:var(--display);font-size:.9rem;color:var(--gris)}
+.fil-ariane li:not(:last-child)::after{content:'/';margin-left:.5rem;color:var(--gris)}
+.fil-ariane a{color:var(--gris);transition:color .15s ease}
+.fil-ariane a:hover{color:var(--rouge)}
+.fil-ariane [aria-current="page"]{color:var(--noir)}
+
+/* ─── Pages intérieures ─── */
+.page{padding-block:clamp(3rem,7vw,5.5rem)}
+.wrap-lecture{max-width:760px}
+.page-hero{margin-bottom:2.5rem}
+.page-titre{font-size:clamp(2rem,5vw,3.4rem);font-weight:600;line-height:1.05;margin-top:.6rem}
+.page-titre em{font-style:italic;color:var(--rouge)}
+.page-meta{font-family:var(--display);color:var(--gris);margin-top:.8rem}
+.page-prix{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--noir);margin-top:.8rem}
+.page-resultat{margin-top:.8rem;font-weight:500}
+.page-resultat span{color:var(--rouge)}
+.page-cover{width:100%;height:auto;border:1px solid var(--ligne);margin-bottom:2rem}
+.chapo{font-size:1.15rem;color:var(--gris);line-height:1.6;margin-bottom:1.5rem}
+
+/* Contenu riche (corps d'article) */
+.prose{font-size:1.05rem;line-height:1.75;color:#2a2a2e}
+.prose h2{font-family:var(--display);font-size:1.6rem;font-weight:600;margin:2.2rem 0 .8rem}
+.prose h3{font-family:var(--display);font-size:1.3rem;font-weight:600;margin:1.8rem 0 .6rem}
+.prose p{margin-bottom:1.1rem}
+.prose ul,.prose ol{margin:0 0 1.1rem 1.3rem;display:flex;flex-direction:column;gap:.4rem}
+.prose a{color:var(--rouge);border-bottom:1px solid var(--rouge)}
+.prose img{max-width:100%;height:auto;margin:1.5rem 0;border:1px solid var(--ligne)}
+.prose blockquote{border-left:3px solid var(--rouge);padding-left:1.2rem;margin:1.5rem 0;color:var(--gris);font-style:italic}
+
+.retour,.page-cta{margin-top:3rem}
+.page-cta{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.liste-inclus{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin:0 0 2.5rem;font-size:1.02rem}
+.liste-inclus li{display:flex;gap:.7em}
+.liste-inclus li::before{content:'—';color:var(--rouge)}
+
+/* ─── Section tarifs (accueil) : 997 à gauche + options à droite ─── */
+.grille-tarif{display:grid;grid-template-columns:1.4fr 1fr;gap:1.5rem;align-items:start}
+.offre--principale{background:var(--noir-doux);border:1px solid rgba(225,6,0,.4);padding:2.5rem;display:flex;flex-direction:column}
+.offre--principale .offre-nom{font-family:var(--display);font-size:.85rem;letter-spacing:.06em;color:var(--gris-clair);text-transform:uppercase}
+.offre--principale .prix{font-family:var(--display);font-size:clamp(2.2rem,5vw,3rem);font-weight:700;margin-block:.6rem 1.3rem}
+.offre--principale .prix span{font-size:1rem;color:var(--gris);font-weight:400}
+.offre--principale .desc{color:var(--gris-clair);margin-bottom:2rem;font-size:.98rem}
+.offre--principale ul{list-style:none;margin-bottom:2rem;display:flex;flex-direction:column;gap:.6rem}
+.offre--principale li{font-size:.94rem;color:var(--gris-clair);display:flex;gap:.6em}
+.offre--principale li::before{content:'—';color:var(--rouge)}
+.offre--principale .cta{align-self:flex-start}
+
+.options{background:var(--noir-doux);border:1px solid var(--ligne-sombre);padding:2.2rem}
+.options-titre{font-family:var(--display);font-size:.85rem;letter-spacing:.06em;color:var(--gris-clair);text-transform:uppercase;margin-bottom:1.4rem}
+.options-liste{list-style:none;display:flex;flex-direction:column}
+.options-liste li{padding-block:1.1rem;border-top:1px solid var(--ligne-sombre)}
+.options-liste li:first-child{border-top:none;padding-top:0}
+.opt-tete{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.opt-nom{font-family:var(--display);font-weight:500;color:var(--blanc)}
+.opt-prix{font-family:var(--display);font-weight:600;color:var(--rouge);white-space:nowrap}
+.opt-note{display:block;color:var(--gris);font-size:.85rem;margin-top:.2rem}
+.options .cta-ligne-clair{margin-top:1.6rem}
+
+/* ─── Liste d'articles ─── */
+.grille-articles{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.carte-article{display:flex;flex-direction:column;border:1px solid var(--ligne);transition:transform .2s ease,border-color .2s ease}
+.carte-article:hover{transform:translateY(-4px);border-color:var(--gris)}
+.carte-article-img{aspect-ratio:16/9;background:linear-gradient(135deg,#1a1a1d,#0c0c0e) center/cover}
+.carte-article-corps{padding:1.6rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.carte-date{font-family:var(--display);font-size:.8rem;color:var(--gris);letter-spacing:.04em}
+.carte-article-corps h2{font-size:1.35rem;font-weight:600}
+.carte-article-corps p{color:var(--gris);font-size:.95rem;flex:1}
+.lire{font-family:var(--display);font-size:.88rem;color:var(--rouge);margin-top:.4rem}
+
+/* ─── Cartes offres / secteurs ─── */
+.grille-cartes{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.carte-simple{border:1px solid var(--ligne);padding:2rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .2s ease,border-color .2s ease}
+.carte-simple:hover{transform:translateY(-4px);border-color:var(--rouge)}
+.carte-simple h2{font-size:1.5rem;font-weight:600}
+.carte-prix{font-family:var(--display);font-weight:700;font-size:1.4rem}
+.carte-simple p{color:var(--gris);font-size:.96rem;flex:1}
+
+.liste .page-hero{max-width:640px}
+.vide{color:var(--gris)}
+.page-404{text-align:center;padding-block:clamp(4rem,10vw,7rem)}
+.page-404 .page-cta{justify-content:center}
+
+@media(max-width:800px){
+  .grille-tarif,.grille-articles,.grille-cartes{grid-template-columns:1fr}
+}

@@ -1,0 +1,72 @@
+{
+    "items": [
+        {
+            "id": "c488bbee30d7",
+            "order": 0,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "Site vitrine",
+            "slug": "site-vitrine",
+            "price": "997 €",
+            "tagline": "Le site professionnel complet, prêt à convertir.",
+            "description": "La base solide : un site vitrine rapide, élégant et optimisé pour le référencement local.",
+            "features": [
+                "Site vitrine sur-mesure",
+                "Ultra-rapide, score Lighthouse 100",
+                "SEO local optimisé",
+                "Design premium responsive",
+                "Mise en ligne et formation incluses"
+            ],
+            "body": "<p>Idéal pour les artisans, commerçants et professions libérales qui veulent une présence en ligne irréprochable et efficace, sans complexité.</p>",
+            "cta_label": "Démarrer mon site",
+            "seo_title": "Site vitrine sur-mesure à 997 € · Initial Db",
+            "seo_description": "Un site vitrine rapide, premium et optimisé SEO pour les commerçants et PME, à partir de 997 €."
+        },
+        {
+            "id": "3d7f11ec064e",
+            "order": 1,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "Site avec CMS",
+            "slug": "site-avec-cms",
+            "price": "à partir de 1 497 €",
+            "tagline": "Gérez votre contenu vous-même, en toute autonomie.",
+            "description": "Un site vitrine complet avec un espace d'administration pour modifier vos textes, articles et réalisations sans toucher au code.",
+            "features": [
+                "Tout le Site vitrine",
+                "Espace d'administration sur-mesure",
+                "Gestion des articles de blog",
+                "Gestion des réalisations",
+                "Formation à la prise en main"
+            ],
+            "body": "<p>Parfait si vous publiez régulièrement (articles, actualités, nouveaux projets) et souhaitez rester autonome au quotidien.</p>",
+            "cta_label": "Discuter de mon projet",
+            "seo_title": "Site vitrine avec CMS et espace d'administration · Initial Db",
+            "seo_description": "Un site que vous gérez vous-même : blog, réalisations et contenus modifiables sans code, à partir de 1 497 €."
+        },
+        {
+            "id": "04e697494fed",
+            "order": 2,
+            "published": true,
+            "created_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-09T07:36:25+00:00",
+            "title": "Site animation 3D",
+            "slug": "site-animation-3d",
+            "price": "à partir de 1 497 €",
+            "tagline": "L'effet « waouh » qui vous démarque vraiment.",
+            "description": "Un site vitrine augmenté d'une expérience 3D immersive au défilement, pour marquer durablement les esprits.",
+            "features": [
+                "Tout le Site vitrine",
+                "Expérience vidéo 3D au scroll",
+                "Animations sur-mesure",
+                "Direction artistique premium"
+            ],
+            "body": "<p>Recommandé aux marques qui veulent sortir du lot et transformer leur site en véritable signature visuelle.</p>",
+            "cta_label": "Voir ce que c'est possible",
+            "seo_title": "Site vitrine avec animation 3D immersive · Initial Db",
+            "seo_description": "Un site vitrine avec expérience 3D au scroll et animations sur-mesure pour un effet « waouh » mémorable."
+        }
+    ]
+}

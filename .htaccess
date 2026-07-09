@@ -1,0 +1,29 @@
+# ============================================================
+#  URLs propres : tout ce qui n'est pas un fichier réel
+#  (assets, images…) est envoyé au routeur index.php
+# ============================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Laisser servir directement les fichiers et dossiers existants
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Tout le reste passe par le routeur
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Page d'erreur 404 gérée par PHP même en accès direct à un .php inexistant
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Empêcher le listage des dossiers
+Options -Indexes
+
+# Ne pas exposer les fichiers sensibles
+<FilesMatch "\.(json|md|tmp)$">
+    Require all denied
+</FilesMatch>
