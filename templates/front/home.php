@@ -107,7 +107,7 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
       <?php endforeach; ?>
     </div>
     <?php if (count($projets)): ?>
-    <p style="margin-top:2.5rem"><a href="<?= url('projets') ?>" class="cta-ligne">Toutes les réalisations</a></p>
+    <p style="margin-top:2.5rem"><a href="<?= url('projets') ?>" class="cta-ligne">Plus de réalisations</a></p>
     <?php endif; ?>
   </div>
 </section>
