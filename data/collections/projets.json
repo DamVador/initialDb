@@ -1,36 +1,36 @@
 {
     "items": [
         {
-            "id": "c7edf416b162",
+            "id": "a3f19c2d7e40",
             "order": 0,
             "published": true,
-            "created_at": "2026-07-09T07:36:25+00:00",
-            "updated_at": "2026-07-09T07:36:25+00:00",
-            "title": "Garage Martin",
-            "slug": "garage-martin",
-            "secteur": "Automobile · Annecy",
-            "offre": "Site animation 3D",
-            "resultat": "+320 % de demandes de devis en trois mois",
-            "cover": "",
-            "body": "<p>Refonte complète du site d'un garage automobile, avec une expérience immersive 3D et un parcours de prise de rendez-vous simplifié.</p><p>Résultat : une hausse spectaculaire des demandes de devis dès les premières semaines.</p>",
-            "seo_title": "Réalisation : site du Garage Martin à Annecy",
-            "seo_description": "Site immersif pour un garage automobile à Annecy : +320 % de demandes de devis en trois mois."
+            "created_at": "2026-07-10T10:30:00+00:00",
+            "updated_at": "2026-07-10T10:30:00+00:00",
+            "title": "Yoann Coaching",
+            "slug": "yoann-coaching",
+            "secteur": "Coach sportif · Indépendant",
+            "offre": "Site vitrine",
+            "resultat": "Enfin visible sur Google quand on le cherche",
+            "cover": "/assets/img/projet-yoann.png",
+            "body": "<p>Yoann, coach sportif indépendant, n'avait aucune présence en ligne : impossible pour ses futurs clients de le trouver sur internet.</p><p>Nous lui avons créé un site vitrine clair et rapide, optimisé pour le référencement local. Résultat : quand on cherche son nom ou un coach sportif dans sa zone, son site apparaît désormais sur Google, et transforme ces recherches en nouveaux contacts.</p>",
+            "seo_title": "Réalisation : site vitrine de Yoann, coach sportif",
+            "seo_description": "Création du site vitrine d'un coach sportif indépendant, désormais visible sur Google et trouvable par ses futurs clients."
         },
         {
-            "id": "dfa377812ac3",
+            "id": "b7d2e8a1c964",
             "order": 1,
             "published": true,
-            "created_at": "2026-07-09T07:36:25+00:00",
-            "updated_at": "2026-07-09T07:36:25+00:00",
-            "title": "Maison Levain",
-            "slug": "maison-levain",
-            "secteur": "Boulangerie · Chambéry",
-            "offre": "Site vitrine",
-            "resultat": "1ʳᵉ position locale sur sa requête cible",
-            "cover": "",
-            "body": "<p>Site vitrine pour une boulangerie artisanale, optimisé pour le référencement local et la mise en avant des produits.</p><p>La boulangerie occupe désormais la première position sur sa principale requête locale.</p>",
-            "seo_title": "Réalisation : site de la boulangerie Maison Levain",
-            "seo_description": "Site vitrine SEO pour une boulangerie à Chambéry, hissée en 1ʳᵉ position locale."
+            "created_at": "2026-07-10T10:30:00+00:00",
+            "updated_at": "2026-07-10T10:30:00+00:00",
+            "title": "Coach Lolo",
+            "slug": "coach-lolo",
+            "secteur": "Coach sportif · +100k abonnés TikTok",
+            "offre": "Refonte de site",
+            "resultat": "Site plus rapide, impeccable sur ordinateur et mobile",
+            "cover": "/assets/img/projet-coachlolo.png",
+            "body": "<p>Coach sportif expérimenté et suivi par plus de 100 000 abonnés sur TikTok, Coach Lolo disposait déjà d'un site, mais qui s'affichait mal selon les écrans et manquait de performance.</p><p>Nous l'avons entièrement refondu : un design modernisé à la hauteur de sa notoriété, des performances nettement améliorées, et un rendu parfaitement adapté aussi bien sur ordinateur que sur mobile.</p>",
+            "seo_title": "Réalisation : refonte du site de Coach Lolo",
+            "seo_description": "Refonte du site d'un coach sportif suivi par plus de 100k abonnés : design modernisé, meilleures performances et affichage responsive."
         }
     ]
 }
