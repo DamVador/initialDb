@@ -8,20 +8,7 @@
         "accroche": "Pour les artisans, commerçants et les PME qui veulent une présence web irréprochable : design premium, référencement local, et une vraie mécanique de conversion.",
         "cta_label": "Démarrer le projet"
     },
-    "meta": [
-        {
-            "value": "100",
-            "label": "Score Lighthouse"
-        },
-        {
-            "value": "< 1s",
-            "label": "Temps de chargement"
-        },
-        {
-            "value": "SEO",
-            "label": "Local optimisé"
-        }
-    ],
+    "meta": [],
     "probleme": {
         "eyebrow": "Le constat",
         "titre_before": "Un beau commerce,",
@@ -54,9 +41,9 @@
         "offer_desc": "Le site vitrine professionnel, complet et prêt à convertir.",
         "offer_features": [
             "Site vitrine sur-mesure",
-            "Ultra-rapide, score Lighthouse 100",
-            "SEO local optimisé",
-            "Design premium responsive"
+            "Référencement optimisé (SEO)",
+            "Design premium adapté mobile",
+            "Interface administrateur"
         ],
         "cta_label": "Choisir cette formule"
     },
@@ -67,9 +54,9 @@
             "note": "Expérience vidéo 3D au scroll, effet « waouh »."
         },
         {
-            "title": "Référencement (SEO)",
+            "title": "Référencement (SEO) mensuel",
             "price": "",
-            "note": "4 articles de blog optimisés rédigés par mois."
+            "note": "Ajout de pages / articles de blog optimisés."
         },
         {
             "title": "Site avec CMS",
