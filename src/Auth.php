@@ -15,7 +15,7 @@ class Auth
     public static function requireLogin(): void
     {
         if (!self::isLoggedIn()) {
-            redirect(url('admin/login'));
+            redirect(admin_url('login'));
         }
     }
 

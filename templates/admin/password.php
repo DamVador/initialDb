@@ -6,7 +6,7 @@
 
 <?php if ($error): ?><div class="adm-flash adm-flash-error"><?= e($error) ?></div><?php endif; ?>
 
-<form class="adm-form adm-form-etroit" method="post" action="<?= url('admin/password') ?>">
+<form class="adm-form adm-form-etroit" method="post" action="<?= admin_url('password') ?>">
   <?= csrf_field() ?>
   <div class="field">
     <label for="old">Mot de passe actuel</label>

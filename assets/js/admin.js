@@ -63,4 +63,30 @@
       return;
     }
   });
+
+  /* ---- Contournement WAF : encode le contenu du formulaire à l'envoi ----
+     Certains pare-feu (ModSecurity/Atomicorp) bloquent en 403 les POST qui
+     contiennent des URLs externes (Calendly, TikTok…) ou du HTML. On envoie
+     le formulaire encodé en Base64 dans un seul champ opaque « _payload » ;
+     le serveur le décode (voir src/admin.php). Repli : sans JS, l'envoi reste
+     normal (et n'est bloqué que si le contenu déclenche une règle). */
+  document.querySelectorAll('form[data-encode]').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      if (form.dataset.encoded === '1') return; // déjà encodé, laisse partir
+      // Sérialise tous les champs AVANT de les neutraliser
+      var params = new URLSearchParams();
+      new FormData(form).forEach(function (value, key) { params.append(key, value); });
+      // Base64 compatible UTF-8 (accents)
+      var payload = btoa(unescape(encodeURIComponent(params.toString())));
+      // On ne veut envoyer QUE le champ opaque : on désactive les champs d'origine
+      Array.prototype.forEach.call(form.elements, function (el) { el.disabled = true; });
+      var hidden = document.createElement('input');
+      hidden.type = 'hidden';
+      hidden.name = '_payload';
+      hidden.value = payload;
+      form.appendChild(hidden);
+      form.dataset.encoded = '1';
+      form.submit();
+    });
+  });
 })();

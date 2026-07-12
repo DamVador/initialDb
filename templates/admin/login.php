@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="<?= url('assets/css/admin.css') ?>" />
 </head>
 <body class="adm adm-login-page">
-<form class="adm-login" method="post" action="<?= url('admin/login') ?>">
+<form class="adm-login" method="post" action="<?= admin_url('login') ?>">
   <div class="adm-login-brand">INITIAL <span>Db</span></div>
   <h1>Espace d'administration</h1>
   <?php if ($error): ?><p class="adm-error"><?= e($error) ?></p><?php endif; ?>

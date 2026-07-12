@@ -23,8 +23,8 @@ if (BASE_URL !== '' && str_starts_with($path, BASE_URL)) {
 $path = trim(rawurldecode($path), '/');
 $segments = $path === '' ? [] : explode('/', $path);
 
-/* -- Espace admin : délégué à src/admin.php -- */
-if (($segments[0] ?? '') === 'admin') {
+/* -- Espace admin (chemin défini par ADMIN_ROUTE) : délégué à src/admin.php -- */
+if (($segments[0] ?? '') === ADMIN_ROUTE) {
     require __DIR__ . '/src/admin.php';
     exit;
 }

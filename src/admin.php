@@ -1,7 +1,8 @@
 <?php
 /* ============================================================
-   admin.php — contrôleur de l'espace d'administration (/admin)
-   Inclus par index.php quand l'URL commence par « admin ».
+   admin.php — contrôleur de l'espace d'administration.
+   Chemin d'accès défini par la constante ADMIN_ROUTE (voir bootstrap.php).
+   Inclus par index.php quand le 1er segment de l'URL vaut ADMIN_ROUTE.
    Le tableau $segments est déjà découpé par index.php.
    ============================================================ */
 
@@ -30,18 +31,32 @@ function admin_unique_slug(string $collection, string $base, string $ignoreId = 
     }
 }
 
+/* ---- Décodage du payload encodé par admin.js (contournement WAF) ----
+   Les formulaires de contenu sont envoyés en Base64 dans le champ _payload
+   pour que le pare-feu de l'hébergeur (ModSecurity/Atomicorp) n'inspecte pas
+   — et ne bloque pas en 403 — leurs URLs externes (Calendly, TikTok…) ou leur
+   HTML. On reconstitue $_POST à l'identique. Repli transparent si le POST
+   arrive en clair (JavaScript désactivé). */
+if (isset($_POST['_payload']) && is_string($_POST['_payload'])) {
+    $raw = base64_decode($_POST['_payload'], true);
+    if ($raw !== false) {
+        parse_str($raw, $decoded);
+        $_POST = $decoded;
+    }
+}
+
 $action = $segments[1] ?? '';
 
 /* ---- Connexion ---- */
 if ($action === 'login') {
     if (Auth::isLoggedIn()) {
-        redirect(url('admin'));
+        redirect(admin_url());
     }
     $error = '';
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         csrf_check();
         if (Auth::attempt($_POST['password'] ?? '')) {
-            redirect(url('admin'));
+            redirect(admin_url());
         }
         $error = 'Mot de passe incorrect.';
     }
@@ -52,7 +67,7 @@ if ($action === 'login') {
 /* ---- Déconnexion ---- */
 if ($action === 'logout') {
     Auth::logout();
-    redirect(url('admin/login'));
+    redirect(admin_url('login'));
 }
 
 /* ===== À partir d'ici, tout exige d'être connecté ===== */
@@ -71,7 +86,7 @@ if ($action === 'password') {
         );
         if ($result === true) {
             flash('Mot de passe modifié avec succès.');
-            redirect(url('admin'));
+            redirect(admin_url());
         }
         $msg = $result;
     }
@@ -86,12 +101,12 @@ if ($action === 'settings') {
         csrf_check();
         Content::saveSettings(form_normalize($schema['fields'], $_POST['f'] ?? []));
         flash('Paramètres enregistrés.');
-        redirect(url('admin/settings'));
+        redirect(admin_url('settings'));
     }
     admin_render('edit', [
         'schema'  => $schema,
         'values'  => Content::settings(),
-        'action'  => url('admin/settings'),
+        'action'  => admin_url('settings'),
         'heading' => $schema['label'],
     ], $schema['label']);
     exit;
@@ -108,12 +123,12 @@ if ($action === 'page') {
         csrf_check();
         Content::savePage($name, form_normalize($schema['fields'], $_POST['f'] ?? []));
         flash('Page enregistrée.');
-        redirect(url('admin/page/' . $name));
+        redirect(admin_url('page/' . $name));
     }
     admin_render('edit', [
         'schema'  => $schema,
         'values'  => Content::page($name),
-        'action'  => url('admin/page/' . $name),
+        'action'  => admin_url('page/' . $name),
         'heading' => $schema['label'],
     ], $schema['label']);
     exit;
@@ -151,17 +166,17 @@ if ($action === 'collection') {
                 Content::updateItem($name, $id, $data);
             }
             flash($schema['singular'] . ' enregistré' . '.');
-            redirect(url('admin/collection/' . $name));
+            redirect(admin_url('collection/' . $name));
         }
 
         admin_render('edit', [
             'schema'  => $schema,
             'values'  => $item ?? [],
             'action'  => $isNew
-                ? url('admin/collection/' . $name . '/new')
-                : url('admin/collection/' . $name . '/edit/' . $id),
+                ? admin_url('collection/' . $name . '/new')
+                : admin_url('collection/' . $name . '/edit/' . $id),
             'heading' => ($isNew ? 'Nouveau : ' : 'Modifier : ') . $schema['singular'],
-            'backUrl' => url('admin/collection/' . $name),
+            'backUrl' => admin_url('collection/' . $name),
         ], $schema['singular']);
         exit;
     }
@@ -173,7 +188,7 @@ if ($action === 'collection') {
             Content::deleteItem($name, $id);
             flash($schema['singular'] . ' supprimé.');
         }
-        redirect(url('admin/collection/' . $name));
+        redirect(admin_url('collection/' . $name));
     }
 
     /* Réordonnancement */
@@ -182,7 +197,7 @@ if ($action === 'collection') {
             csrf_check();
             Content::move($name, $id, $segments[5] ?? 'up');
         }
-        redirect(url('admin/collection/' . $name));
+        redirect(admin_url('collection/' . $name));
     }
 
     /* Liste (par défaut) */

@@ -9,7 +9,7 @@ $total = count($items);
     <h1><?= e($schema['label']) ?></h1>
     <p class="adm-sub"><?= $total ?> élément<?= $total > 1 ? 's' : '' ?></p>
   </div>
-  <a class="adm-btn" href="<?= url('admin/collection/' . $name . '/new') ?>">+ Ajouter</a>
+  <a class="adm-btn" href="<?= admin_url('collection/' . $name . '/new') ?>">+ Ajouter</a>
 </header>
 
 <?php if (!$items): ?>
@@ -30,8 +30,8 @@ $total = count($items);
     <tr>
       <td class="col-order">
         <div class="adm-order">
-          <form method="post" action="<?= url('admin/collection/' . $name . '/move/' . $id . '/up') ?>"><?= csrf_field() ?><button class="adm-icon"<?= $i === 0 ? ' disabled' : '' ?> title="Monter">↑</button></form>
-          <form method="post" action="<?= url('admin/collection/' . $name . '/move/' . $id . '/down') ?>"><?= csrf_field() ?><button class="adm-icon"<?= $i === $total - 1 ? ' disabled' : '' ?> title="Descendre">↓</button></form>
+          <form method="post" action="<?= admin_url('collection/' . $name . '/move/' . $id . '/up') ?>"><?= csrf_field() ?><button class="adm-icon"<?= $i === 0 ? ' disabled' : '' ?> title="Monter">↑</button></form>
+          <form method="post" action="<?= admin_url('collection/' . $name . '/move/' . $id . '/down') ?>"><?= csrf_field() ?><button class="adm-icon"<?= $i === $total - 1 ? ' disabled' : '' ?> title="Descendre">↓</button></form>
         </div>
       </td>
       <td>
@@ -50,8 +50,8 @@ $total = count($items);
           <?php if (!empty($item['published']) && !empty($item['slug'])): ?>
             <a class="adm-lien" href="<?= url($route . '/' . $item['slug']) ?>" target="_blank" rel="noopener">Voir</a>
           <?php endif; ?>
-          <a class="adm-lien" href="<?= url('admin/collection/' . $name . '/edit/' . $id) ?>">Modifier</a>
-          <form method="post" action="<?= url('admin/collection/' . $name . '/delete/' . $id) ?>" onsubmit="return confirm('Supprimer définitivement cet élément ?');">
+          <a class="adm-lien" href="<?= admin_url('collection/' . $name . '/edit/' . $id) ?>">Modifier</a>
+          <form method="post" action="<?= admin_url('collection/' . $name . '/delete/' . $id) ?>" onsubmit="return confirm('Supprimer définitivement cet élément ?');">
             <?= csrf_field() ?><button class="adm-lien adm-lien-danger">Supprimer</button>
           </form>
         </div>

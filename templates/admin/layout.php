@@ -25,25 +25,25 @@ $active = fn(string $path): string => (rtrim($here, '/') === rtrim($path, '/')) 
 <aside class="adm-side" id="adm-nav">
   <div class="adm-brand">INITIAL <span>Db</span> · Admin</div>
   <nav class="adm-nav">
-    <a href="<?= url('admin') ?>"<?= $active(url('admin')) ?>>Tableau de bord</a>
+    <a href="<?= admin_url() ?>"<?= $active(admin_url()) ?>>Tableau de bord</a>
 
     <span class="adm-nav-titre">Pages</span>
     <?php foreach (Schema::singletons() as $key => $s): ?>
-      <a href="<?= url('admin/page/' . $key) ?>"<?= $active(url('admin/page/' . $key)) ?>><?= e($s['label']) ?></a>
+      <a href="<?= admin_url('page/' . $key) ?>"<?= $active(admin_url('page/' . $key)) ?>><?= e($s['label']) ?></a>
     <?php endforeach; ?>
 
     <span class="adm-nav-titre">Contenus</span>
     <?php foreach (Schema::collections() as $key => $c): ?>
-      <a href="<?= url('admin/collection/' . $key) ?>"<?= $active(url('admin/collection/' . $key)) ?>><?= e($c['label']) ?></a>
+      <a href="<?= admin_url('collection/' . $key) ?>"<?= $active(admin_url('collection/' . $key)) ?>><?= e($c['label']) ?></a>
     <?php endforeach; ?>
 
     <span class="adm-nav-titre">Réglages</span>
-    <a href="<?= url('admin/settings') ?>"<?= $active(url('admin/settings')) ?>>Paramètres du site</a>
-    <a href="<?= url('admin/password') ?>"<?= $active(url('admin/password')) ?>>Mot de passe</a>
+    <a href="<?= admin_url('settings') ?>"<?= $active(admin_url('settings')) ?>>Paramètres du site</a>
+    <a href="<?= admin_url('password') ?>"<?= $active(admin_url('password')) ?>>Mot de passe</a>
   </nav>
   <div class="adm-side-bas">
     <a href="<?= url('') ?>" target="_blank" rel="noopener">↗ Voir le site</a>
-    <a href="<?= url('admin/logout') ?>" class="adm-logout">Déconnexion</a>
+    <a href="<?= admin_url('logout') ?>" class="adm-logout">Déconnexion</a>
   </div>
 </aside>
 

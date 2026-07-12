@@ -17,6 +17,11 @@ define('TEMPLATES_PATH', BASE_PATH . '/templates');
 // dans un sous-dossier, ajuster BASE_URL (ex. '/mon-dossier').
 define('BASE_URL', '');
 
+// Chemin d'accès à l'espace d'administration. Volontairement neutre :
+// NE PAS y mettre le mot « admin », bloqué par les WAF/mod_security de
+// nombreux hébergeurs (dont PlanetHoster). Pour le changer : cette ligne suffit.
+define('ADMIN_ROUTE', 'gestion');
+
 require __DIR__ . '/helpers.php';
 require __DIR__ . '/Content.php';
 require __DIR__ . '/Auth.php';

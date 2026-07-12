@@ -15,6 +15,13 @@ function url(string $path = ''): string
     return BASE_URL . '/' . ltrim($path, '/');
 }
 
+/** URL d'une page de l'espace d'administration (préfixe ADMIN_ROUTE). */
+function admin_url(string $sub = ''): string
+{
+    $sub = ltrim($sub, '/');
+    return url(ADMIN_ROUTE . ($sub !== '' ? '/' . $sub : ''));
+}
+
 /** Redirige puis stoppe le script. */
 function redirect(string $path): void
 {

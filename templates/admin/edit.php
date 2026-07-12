@@ -7,7 +7,7 @@
   <h1><?= e($heading) ?></h1>
 </header>
 
-<form class="adm-form" method="post" action="<?= e($action) ?>">
+<form class="adm-form" method="post" action="<?= e($action) ?>" data-encode>
   <?= csrf_field() ?>
   <?= form_fields($schema['fields'], $values, 'f') ?>
   <div class="adm-form-actions">
