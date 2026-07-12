@@ -28,10 +28,10 @@
             "order": 1,
             "published": true,
             "created_at": "2026-07-09T07:36:25+00:00",
-            "updated_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-10T14:39:43+00:00",
             "title": "Site avec CMS",
             "slug": "site-avec-cms",
-            "price": "à partir de 1 497 €",
+            "price": "Sur devis",
             "tagline": "Gérez votre contenu vous-même, en toute autonomie.",
             "description": "Un site vitrine complet avec un espace d'administration pour modifier vos textes, articles et réalisations sans toucher au code.",
             "features": [
@@ -41,20 +41,20 @@
                 "Gestion des réalisations",
                 "Formation à la prise en main"
             ],
-            "body": "<p>Parfait si vous publiez régulièrement (articles, actualités, nouveaux projets) et souhaitez rester autonome au quotidien.</p>",
+            "body": "<p>Parfait si vous publiez régulièrement (articles, actualités, nouveaux projets) et souhaitez rester autonome au quotidien.</p>\r\n</br>\r\n<p>Site réalisé en Wordpress ou Cockpit par exemple</p>",
             "cta_label": "Discuter de mon projet",
             "seo_title": "Site vitrine avec CMS et espace d'administration · Initial Db",
-            "seo_description": "Un site que vous gérez vous-même : blog, réalisations et contenus modifiables sans code, à partir de 1 497 €."
+            "seo_description": "Un site que vous gérez vous-même : blog, réalisations et contenus modifiables sans code."
         },
         {
             "id": "04e697494fed",
             "order": 2,
             "published": true,
             "created_at": "2026-07-09T07:36:25+00:00",
-            "updated_at": "2026-07-09T07:36:25+00:00",
+            "updated_at": "2026-07-10T14:37:01+00:00",
             "title": "Site animation 3D",
             "slug": "site-animation-3d",
-            "price": "à partir de 1 497 €",
+            "price": "Sur devis",
             "tagline": "L'effet « waouh » qui vous démarque vraiment.",
             "description": "Un site vitrine augmenté d'une expérience 3D immersive au défilement, pour marquer durablement les esprits.",
             "features": [
