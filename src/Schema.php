@@ -46,7 +46,7 @@ class Schema
                     'secteur'         => ['type' => 'text', 'label' => 'Secteur · Ville', 'help' => 'ex. Automobile · Annecy'],
                     'offre'           => ['type' => 'text', 'label' => 'Formule (badge)', 'help' => 'ex. Site animation 3D'],
                     'resultat'        => ['type' => 'text', 'label' => 'Résultat clé', 'help' => 'ex. +320 % de demandes de devis'],
-                    'cover'           => ['type' => 'image', 'label' => 'Visuel (URL)'],
+                    'cover'           => ['type' => 'image', 'label' => 'Visuel (URL)', 'help' => 'ex. /assets/img/projets/projet-client.png'],
                     'body'            => ['type' => 'html', 'label' => 'Description du projet'],
                     'seo_title'       => ['type' => 'text', 'label' => 'Titre SEO'],
                     'seo_description' => ['type' => 'textarea', 'label' => 'Description SEO'],

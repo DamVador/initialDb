@@ -26,7 +26,7 @@
         "eyebrow": "Le constat",
         "titre_before": "Un beau commerce,",
         "titre_em": "invisible",
-        "titre_after": " en ligne."
+        "titre_after": "en ligne."
     },
     "benefices": [
         {
@@ -63,13 +63,18 @@
     "options": [
         {
             "title": "Animation 3D",
-            "price": "500 €",
+            "price": "",
             "note": "Expérience vidéo 3D au scroll, effet « waouh »."
         },
         {
             "title": "Référencement (SEO)",
-            "price": "180 €/mois",
+            "price": "",
             "note": "4 articles de blog optimisés rédigés par mois."
+        },
+        {
+            "title": "Site avec CMS",
+            "price": "",
+            "note": "Gérez vos textes, articles et réalisations en autonomie."
         }
     ],
     "garage": {
