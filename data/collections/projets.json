@@ -31,6 +31,54 @@
             "body": "<p>Coach sportif expérimenté et suivi par plus de 100 000 abonnés sur TikTok, Coach Lolo disposait déjà d'un site, mais qui s'affichait mal selon les écrans et manquait de performance.</p><p>Nous l'avons entièrement refondu : un design modernisé à la hauteur de sa notoriété, des performances nettement améliorées, et un rendu parfaitement adapté aussi bien sur ordinateur que sur mobile.</p>",
             "seo_title": "Réalisation : refonte du site de Coach Lolo",
             "seo_description": "Refonte du site d'un coach sportif suivi par plus de 100k abonnés : design modernisé, meilleures performances et affichage responsive."
+        },
+        {
+            "id": "c5e9a3f21d78",
+            "order": 2,
+            "published": true,
+            "created_at": "2026-07-12T10:30:00+00:00",
+            "updated_at": "2026-07-12T10:30:00+00:00",
+            "title": "Salon Yakoub",
+            "slug": "salon-yakoub",
+            "secteur": "Coiffeur & barbier · Arcueil et Gentilly",
+            "offre": "Site vitrine",
+            "resultat": "Une vitrine claire pour un salon sans rendez-vous",
+            "cover": "/assets/img/projets/projet-coiffeur.png",
+            "body": "<p>Salon Yakoub, coiffeur pour homme sans rendez-vous implanté à Arcueil et Gentilly, souhaitait une présence en ligne aussi soignée que l'accueil en boutique.</p><p>Nous lui avons créé un site vitrine clair et élégant : identité mise en avant, présentation des deux salons et de leurs horaires, et un accès direct aux coordonnées. De quoi rassurer les nouveaux clients et les orienter vers le bon salon avant même de pousser la porte.</p>",
+            "seo_title": "Réalisation : site vitrine du Salon Yakoub, coiffeur homme",
+            "seo_description": "Création du site vitrine d'un salon de coiffure pour homme à Arcueil et Gentilly : présentation des salons, horaires et coordonnées."
+        },
+        {
+            "id": "d1b7c4e8a920",
+            "order": 3,
+            "published": true,
+            "created_at": "2026-07-12T10:30:00+00:00",
+            "updated_at": "2026-07-12T10:30:00+00:00",
+            "title": "Yan Ge · Cours de chinois",
+            "slug": "yan-ge-cours-de-chinois",
+            "secteur": "Cours de chinois & services éditoriaux · Paris",
+            "offre": "Site vitrine multilingue",
+            "resultat": "Un site trilingue qui touche élèves et auteurs",
+            "cover": "/assets/img/projets/projet-cours.png",
+            "body": "<p>Yan Ge propose des cours de chinois sur mesure à Paris et en visio, ainsi qu'un accompagnement éditorial pour auteurs, étudiants et chercheurs. Une double activité qui s'adresse à un public international.</p><p>Nous avons conçu un site vitrine élégant et entièrement multilingue (chinois, français, anglais), avec une présentation claire des cours et des services éditoriaux, et une demande de devis mise en avant. Chaque visiteur trouve l'information dans sa langue et passe facilement à l'action.</p>",
+            "seo_title": "Réalisation : site multilingue de cours de chinois Yan Ge",
+            "seo_description": "Création d'un site vitrine trilingue (chinois, français, anglais) pour des cours de chinois et des services éditoriaux à Paris et en visio."
+        },
+        {
+            "id": "e8a2d5f19c34",
+            "order": 4,
+            "published": true,
+            "created_at": "2026-07-12T10:30:00+00:00",
+            "updated_at": "2026-07-12T10:30:00+00:00",
+            "title": "N Performance",
+            "slug": "n-performance",
+            "secteur": "Studio de coaching sportif · Longjumeau",
+            "offre": "Site vitrine",
+            "resultat": "Le studio mis en valeur, contact facilité",
+            "cover": "/assets/img/projets/projet-nperformance.png",
+            "body": "<p>N Performance est un studio de coaching personnalisé à Longjumeau : remise en forme, perte de poids, performance, réathlétisation et pressothérapie. Un lieu et un accompagnement sur-mesure qui méritaient une vraie vitrine.</p><p>Nous avons réalisé un site vitrine chaleureux et professionnel, qui met en avant l'ambiance du studio, détaille les services et guide le visiteur vers la prise de rendez-vous. Une image en ligne fidèle à l'accompagnement proposé sur place.</p>",
+            "seo_title": "Réalisation : site vitrine du studio N Performance",
+            "seo_description": "Création du site vitrine d'un studio de coaching sportif personnalisé à Longjumeau : présentation des services et prise de rendez-vous."
         }
     ]
 }

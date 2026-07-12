@@ -6,6 +6,8 @@ $title = $meta['title'] ?? $siteName;
 $description = $meta['description'] ?? ($settings['tagline'] ?? '');
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 $canonical = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVER['REQUEST_URI'] ?? '/');
+$origin = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost');
+$ogImage = $origin . url('assets/img/og-image.png'); // aperçu au partage (lien social)
 ?>
 <!doctype html>
 <html lang="fr">
@@ -16,8 +18,18 @@ $canonical = $scheme . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . ($_SERVE
 <?php if ($description): ?><meta name="description" content="<?= e($description) ?>" /><?php endif; ?>
 <link rel="canonical" href="<?= e($canonical) ?>" />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="<?= e($siteName) ?>" />
+<meta property="og:url" content="<?= e($canonical) ?>" />
 <meta property="og:title" content="<?= e($title) ?>" />
 <?php if ($description): ?><meta property="og:description" content="<?= e($description) ?>" /><?php endif; ?>
+<meta property="og:image" content="<?= e($ogImage) ?>" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Initial Db — studio digital de création de sites vitrines" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="<?= e($title) ?>" />
+<?php if ($description): ?><meta name="twitter:description" content="<?= e($description) ?>" /><?php endif; ?>
+<meta name="twitter:image" content="<?= e($ogImage) ?>" />
 <link rel="icon" href="<?= url('assets/img/favicon/favicon.ico') ?>" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="<?= url('assets/img/favicon/favicon-32x32.png') ?>" />
 <link rel="icon" type="image/png" sizes="16x16" href="<?= url('assets/img/favicon/favicon-16x16.png') ?>" />
