@@ -36,7 +36,7 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
 <section class="probleme">
   <div class="wrap">
     <span class="eyebrow"><?= e($probleme['eyebrow'] ?? '') ?></span>
-    <h2 class="titre"><?= e($probleme['titre_before'] ?? '') ?><?php if (!empty($probleme['titre_em'])): ?> <em><?= e($probleme['titre_em']) ?></em><?php endif; ?><?= e($probleme['titre_after'] ?? '') ?></h2>
+    <h2 class="titre"><?= e($probleme['titre_before'] ?? '') ?><?php if (!empty($probleme['titre_em'])): ?> <em><?= e($probleme['titre_em']) ?></em> <?php endif; ?><?= e($probleme['titre_after'] ?? '') ?></h2>
     <div class="benefices">
       <?php foreach (($page['benefices'] ?? []) as $b): ?>
       <div class="benef">
