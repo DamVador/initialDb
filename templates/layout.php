@@ -42,6 +42,41 @@ $ogImage = $origin . url('assets/img/og-image.png'); // aperçu au partage (lien
 <link rel="stylesheet" href="<?= url('assets/css/tokens.css') ?>" />
 <link rel="stylesheet" href="<?= url('assets/css/style.css') ?>" />
 <script src="<?= url('assets/js/main.js') ?>" defer></script>
+<?php
+/* ---- Données structurées JSON-LD (SEO) ---- */
+// Studio (présent sur toutes les pages)
+$org = [
+    '@context' => 'https://schema.org',
+    '@type'    => 'ProfessionalService',
+    'name'     => $siteName,
+    'url'      => $origin . url(''),
+    'image'    => $ogImage,
+    'description' => $settings['tagline'] ?? '',
+    'areaServed'  => 'France',
+];
+if (!empty($settings['email']))          { $org['email'] = $settings['email']; }
+if (!empty($settings['whatsapp']))       { $org['telephone'] = '+' . preg_replace('/\D/', '', $settings['whatsapp']); }
+if (!empty($settings['legal']['ville'])) { $org['address'] = ['@type' => 'PostalAddress', 'addressLocality' => $settings['legal']['ville'], 'addressCountry' => 'FR']; }
+$sameAs = array_values(array_filter([$settings['tiktok'] ?? '']));
+if ($sameAs) { $org['sameAs'] = $sameAs; }
+echo json_ld($org);
+
+// Fil d'Ariane structuré
+if (!empty($breadcrumb)) {
+    $items = [];
+    foreach ($breadcrumb as $i => $b) {
+        $node = ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $b['label'] ?? ''];
+        if (!empty($b['url'])) { $node['item'] = $b['url']; }
+        $items[] = $node;
+    }
+    echo json_ld(['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => $items]);
+}
+
+// JSON-LD spécifiques à la page (FAQPage, ContactPage…)
+foreach (($meta['jsonld'] ?? []) as $ld) {
+    if (is_array($ld)) { echo json_ld($ld); }
+}
+?>
 </head>
 <body>
 

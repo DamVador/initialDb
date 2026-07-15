@@ -20,6 +20,32 @@
             ],
             "body": "<p>Idéal pour les artisans, commerçants et professions libérales qui veulent une présence en ligne irréprochable et efficace, sans complexité.</p>",
             "cta_label": "Démarrer mon site",
+            "faq": [
+                {
+                    "question": "Qu'est-ce qui est inclus dans le Site vitrine à 997 € ?",
+                    "answer": "Un site vitrine complet et sur-mesure : design premium adapté au mobile, référencement local optimisé, performances maximales, mise en ligne et une interface pour modifier vos textes. Tout est compris dans le prix, sans surprise."
+                },
+                {
+                    "question": "Le site est-il optimisé pour le référencement ?",
+                    "answer": "Oui. Chaque site est construit avec une structure propre, des données structurées et les mots-clés de votre zone, pour vous donner les meilleures bases sur Google en local."
+                },
+                {
+                    "question": "Que se passe-t-il si je veux ajouter des pages plus tard ?",
+                    "answer": "C'est possible à tout moment : nous vous établissons un devis pour les pages supplémentaires, ou vous les gérez vous-même avec l'option CMS."
+                },
+                {
+                    "question": "Le site est-il adapté au mobile ?",
+                    "answer": "Toujours. Chaque site est pensé pour le mobile d'abord et s'affiche parfaitement sur téléphone, tablette et ordinateur."
+                },
+                {
+                    "question": "Y a-t-il un abonnement mensuel ?",
+                    "answer": "Non, le Site vitrine est un paiement unique. Seuls l'hébergement et le nom de domaine se renouvellent chaque année (quelques dizaines d'euros) ; les suivis récurrents comme le référencement restent facultatifs."
+                },
+                {
+                    "question": "Qui gère l'hébergement et le nom de domaine ?",
+                    "answer": "Nous mettons tout en place pour vous. L'hébergement et le domaine sont à votre nom — vous en êtes propriétaire — et nous vous accompagnons pour le renouvellement si besoin."
+                }
+            ],
             "seo_title": "Site vitrine sur-mesure à 997 € · Initial Db",
             "seo_description": "Un site vitrine rapide, premium et optimisé SEO pour les commerçants et PME, à partir de 997 €."
         },
@@ -43,6 +69,24 @@
             ],
             "body": "<p>Parfait si vous publiez régulièrement (articles, actualités, nouveaux projets) et souhaitez rester autonome au quotidien.</p>\r\n</br>\r\n<p>Site réalisé en Wordpress ou Cockpit par exemple</p>",
             "cta_label": "Discuter de mon projet",
+            "faq": [
+                {
+                    "question": "Puis-je modifier mon contenu sans savoir coder ?",
+                    "answer": "Oui, c'est tout l'intérêt du CMS : vous modifiez vos textes, articles et réalisations depuis une interface simple, sans toucher à une ligne de code."
+                },
+                {
+                    "question": "Quelle est la différence avec WordPress ?",
+                    "answer": "Selon votre besoin, nous réalisons le CMS sur-mesure ou sur une base éprouvée (WordPress, Cockpit…). L'objectif : une interface épurée, limitée à ce dont vous avez vraiment besoin, sans la lourdeur ni les extensions à maintenir d'un WordPress classique."
+                },
+                {
+                    "question": "Y a-t-il de la maintenance à prévoir ?",
+                    "answer": "Très peu. Le site reste rapide et sécurisé ; nous pouvons assurer les mises à jour dans le cadre d'un suivi, ou vous laisser totalement autonome."
+                },
+                {
+                    "question": "Combien de personnes peuvent accéder à l'administration ?",
+                    "answer": "Autant que nécessaire : un accès pour vous, et d'autres pour votre équipe si vous le souhaitez."
+                }
+            ],
             "seo_title": "Site vitrine avec CMS et espace d'administration · Initial Db",
             "seo_description": "Un site que vous gérez vous-même : blog, réalisations et contenus modifiables sans code."
         },

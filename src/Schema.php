@@ -46,7 +46,7 @@ class Schema
                     'secteur'         => ['type' => 'text', 'label' => 'Secteur · Ville', 'help' => 'ex. Automobile · Annecy'],
                     'offre'           => ['type' => 'text', 'label' => 'Formule (badge)', 'help' => 'ex. Site animation 3D'],
                     'resultat'        => ['type' => 'text', 'label' => 'Résultat clé', 'help' => 'ex. +320 % de demandes de devis'],
-                    'cover'           => ['type' => 'image', 'label' => 'Visuel (URL)', 'help' => 'ex. /assets/img/projets/projet-client.png'],
+                    'cover'           => ['type' => 'image', 'label' => 'Visuel (URL)', 'help' => 'ex. /assets/img/projets/projet-client.webp'],
                     'body'            => ['type' => 'html', 'label' => 'Description du projet'],
                     'seo_title'       => ['type' => 'text', 'label' => 'Titre SEO'],
                     'seo_description' => ['type' => 'textarea', 'label' => 'Description SEO'],
@@ -82,6 +82,10 @@ class Schema
                     'features'        => ['type' => 'lines', 'label' => 'Ce qui est inclus (une ligne = un point)'],
                     'body'            => ['type' => 'html', 'label' => 'Contenu détaillé'],
                     'cta_label'       => ['type' => 'text', 'label' => 'Texte du bouton'],
+                    'faq'             => ['type' => 'repeater', 'label' => 'FAQ de l\'offre', 'item_label' => 'Question', 'fields' => [
+                        'question' => ['type' => 'text', 'label' => 'Question'],
+                        'answer'   => ['type' => 'textarea', 'label' => 'Réponse'],
+                    ]],
                     'seo_title'       => ['type' => 'text', 'label' => 'Titre SEO'],
                     'seo_description' => ['type' => 'textarea', 'label' => 'Description SEO'],
                     'published'       => ['type' => 'bool', 'label' => 'Publié'],
@@ -171,6 +175,10 @@ class Schema
                         'sous'      => ['type' => 'textarea', 'label' => 'Texte'],
                         'cta_label' => ['type' => 'text', 'label' => 'Bouton'],
                     ]],
+                    'faq' => ['type' => 'repeater', 'label' => 'FAQ (questions fréquentes)', 'item_label' => 'Question', 'fields' => [
+                        'question' => ['type' => 'text', 'label' => 'Question'],
+                        'answer'   => ['type' => 'textarea', 'label' => 'Réponse'],
+                    ]],
                     'seo' => ['type' => 'group', 'label' => 'Référencement (SEO)', 'fields' => [
                         'seo_title'       => ['type' => 'text', 'label' => 'Titre SEO'],
                         'seo_description' => ['type' => 'textarea', 'label' => 'Description SEO'],
@@ -193,6 +201,21 @@ class Schema
                     'eyebrow'         => ['type' => 'text', 'label' => 'Sur-titre'],
                     'title'           => ['type' => 'text', 'label' => 'Titre de la page'],
                     'intro'           => ['type' => 'textarea', 'label' => 'Introduction'],
+                    'seo_title'       => ['type' => 'text', 'label' => 'Titre SEO'],
+                    'seo_description' => ['type' => 'textarea', 'label' => 'Description SEO'],
+                ],
+            ],
+            'contact' => [
+                'label' => 'Page Contact',
+                'fields' => [
+                    'eyebrow'         => ['type' => 'text', 'label' => 'Sur-titre', 'help' => 'ex. Contact'],
+                    'titre'           => ['type' => 'text', 'label' => 'Titre (H1)', 'help' => 'ex. Parlons de votre projet'],
+                    'intro'           => ['type' => 'textarea', 'label' => 'Introduction'],
+                    'reponse'         => ['type' => 'text', 'label' => 'Délai de réponse affiché', 'help' => 'ex. Réponse sous 24h ouvrées'],
+                    'faq'             => ['type' => 'repeater', 'label' => 'FAQ de la page contact', 'item_label' => 'Question', 'fields' => [
+                        'question' => ['type' => 'text', 'label' => 'Question'],
+                        'answer'   => ['type' => 'textarea', 'label' => 'Réponse'],
+                    ]],
                     'seo_title'       => ['type' => 'text', 'label' => 'Titre SEO'],
                     'seo_description' => ['type' => 'textarea', 'label' => 'Description SEO'],
                 ],

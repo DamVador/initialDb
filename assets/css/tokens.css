@@ -28,6 +28,6 @@
 
   /* ---- Logos (fichiers) ----
      Le nom décrit le FOND sur lequel le logo est posé. */
-  --logo-sur-fond-sombre:url(../img/logo-fond-sombre.png); /* texte blanc — navbar, footer */
-  --logo-sur-fond-clair:url(../img/logo-fond-clair.png);   /* texte noir — sections claires */
+  --logo-sur-fond-sombre:url(../img/logo-fond-sombre.webp); /* texte blanc — navbar, footer */
+  --logo-sur-fond-clair:url(../img/logo-fond-clair.webp);   /* texte noir — sections claires */
 }

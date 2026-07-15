@@ -18,13 +18,13 @@
     "benefices": [
         {
             "num": "01",
-            "title": "Acquisition",
-            "text": "Vous sortez de la page trois. Les clients du quartier vous trouvent enfin quand ils cherchent."
+            "title": "Crédibilité",
+            "text": "Un site soigné, à la hauteur de votre travail. Vos futurs clients vous prennent au sérieux dès le premier coup d'œil."
         },
         {
             "num": "02",
             "title": "SEO local",
-            "text": "Données structurées, fiche Google, pages de service : la mécanique complète du référencement de proximité."
+            "text": "Données structurées, pages de service et mots-clés locaux : toute la mécanique technique pour remonter dans les recherches de votre secteur."
         },
         {
             "num": "03",
@@ -120,6 +120,28 @@
         "sous": "Réservez un appel de 30 minutes, ou écrivez-moi directement. Réponse rapide, sans engagement.",
         "cta_label": "Réserver un appel"
     },
+    "faq": [
+        {
+            "question": "Combien de temps faut-il pour créer mon site ?",
+            "answer": "Comptez 1 à 2 semaines pour un site vitrine. Le délai dépend surtout de votre réactivité pour valider les étapes et fournir vos contenus."
+        },
+        {
+            "question": "Combien coûte un site vitrine ?",
+            "answer": "Le site vitrine complet est à 997 €. Des options s'ajoutent à la carte selon vos besoins, comme un CMS pour gérer vos contenus, une animation 3D ou un suivi référencement — et d'autres encore."
+        },
+        {
+            "question": "Le site m'appartient-il vraiment ?",
+            "answer": "Oui, à 100 %. Le site, le nom de domaine et tous les accès sont à votre nom : vous êtes pleinement propriétaire et libre à tout moment."
+        },
+        {
+            "question": "Pourrai-je modifier mon site moi-même ?",
+            "answer": "Avec le Site vitrine, vous pouvez déjà modifier vos textes vous-même. Avec l'option CMS, vous gérez en plus vos articles et vos réalisations en toute autonomie. Pour des modifications plus poussées, nous pouvons nous en charger, sur devis séparé."
+        },
+        {
+            "question": "Mon site sera-t-il visible sur Google ?",
+            "answer": "Chaque site est construit optimisé pour le référencement local : structure propre, mots-clés, performance. La visibilité se construit ensuite dans le temps, et peut être accélérée par un suivi mensuel."
+        }
+    ],
     "seo": {
         "seo_title": "Initial Db · Studio digital de création de sites vitrines",
         "seo_description": "Studio digital spécialisé dans les sites vitrines rapides et optimisés pour le référencement local des artisans, commerçants et PME."

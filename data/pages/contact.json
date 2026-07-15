@@ -1,0 +1,26 @@
+{
+    "eyebrow": "Contact",
+    "titre": "Parlons de votre projet",
+    "intro": "Un projet de site, une question, un devis ? Choisissez le canal qui vous arrange — nous répondons vite, et sans engagement.",
+    "reponse": "Réponse sous 24h ouvrées",
+    "faq": [
+        {
+            "question": "Comment se déroule le premier appel ?",
+            "answer": "Un échange de 30 minutes, sans engagement : nous cadrons votre objectif, votre activité et vos attentes pour voir comment vous aider au mieux."
+        },
+        {
+            "question": "Que dois-je préparer avant notre échange ?",
+            "answer": "Rien d'obligatoire. Quelques exemples de sites que vous aimez et une idée de vos objectifs suffisent — nous nous occupons du reste."
+        },
+        {
+            "question": "Le devis est-il gratuit ?",
+            "answer": "Oui, totalement gratuit et sans engagement. Vous recevez une proposition claire et détaillée avant toute décision."
+        },
+        {
+            "question": "Sous quel délai répondez-vous ?",
+            "answer": "Sous 24h ouvrées, souvent bien plus vite."
+        }
+    ],
+    "seo_title": "Contact — Créons votre site vitrine · Initial Db",
+    "seo_description": "Parlons de votre projet de site web : réservez un appel, écrivez sur WhatsApp ou par email. Réponse sous 24h, sans engagement."
+}

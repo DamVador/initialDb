@@ -22,6 +22,7 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
           <li><a href="<?= url('projets') ?>">Réalisations</a></li>
           <li><a href="<?= url('') ?>#process">Méthode</a></li>
           <li><a href="<?= url('articles') ?>">Blog</a></li>
+          <li><a href="<?= url('contact') ?>">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -30,7 +31,7 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
           <?php foreach (Content::published('offres') as $offre): ?>
             <li><a href="<?= url('offres/' . $offre['slug']) ?>"><?= e($offre['title']) ?></a></li>
           <?php endforeach; ?>
-          <li><a href="<?= url('') ?>#contact" class="rouge">Démarrer un projet</a></li>
+          <li><a href="<?= url('contact') ?>" class="rouge">Démarrer un projet</a></li>
         </ul>
       </div>
       <div class="footer-col">

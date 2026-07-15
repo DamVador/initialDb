@@ -64,7 +64,7 @@
       (function (i) {
         var img = new Image();
         img.decoding = 'async';
-        img.onload = function () { if (i === lastFrame || lastFrame < 0) draw(Math.max(lastFrame, 0)); };
+        img.onload = function () { if (active) draw(Math.max(lastFrame, 0)); };
         img.src = frameUrl(i);
         images[i] = img;
       })(i);
@@ -80,16 +80,30 @@
     draw(Math.max(lastFrame, 0));
   }
 
+  function frameReady(img) { return img && img.complete && img.naturalWidth; }
+
+  // Frame chargée la plus proche de idx : évite l'écran noir et les saccades
+  // tant que la frame exacte n'est pas encore téléchargée (on « tient » la
+  // dernière image cohérente au lieu de sauter dans le vide).
+  function nearestReady(idx) {
+    if (frameReady(images[idx])) return images[idx];
+    for (var d = 1; d < FRAMES; d++) {
+      if (idx - d >= 0 && frameReady(images[idx - d])) return images[idx - d];
+      if (idx + d < FRAMES && frameReady(images[idx + d])) return images[idx + d];
+    }
+    return null;
+  }
+
   function draw(idx) {
-    var img = images[idx];
+    lastFrame = idx;
+    var img = nearestReady(idx);
+    if (!img) return; // rien de chargé : on laisse le canvas tel quel (pas de flash)
     var cw = stickyEl.clientWidth, ch = stickyEl.clientHeight;
-    if (!img || !img.complete || !img.naturalWidth) { lastFrame = idx; return; }
     var iw = img.naturalWidth, ih = img.naturalHeight;
     var scale = Math.max(cw / iw, ch / ih);
     var w = iw * scale, h = ih * scale;
     ctx.clearRect(0, 0, cw, ch);
     ctx.drawImage(img, (cw - w) / 2, (ch - h) / 2, w, h);
-    lastFrame = idx;
   }
 
   /* ---- Progression du scroll (0 → 1) ---- */
@@ -135,7 +149,12 @@
     active = true;
     section.classList.add('is-scrolly');
     sizeCanvas();
-    preload();
+    // Lazy-load : on NE précharge PLUS les frames (~11 Mo) ici, sinon elles
+    // seraient téléchargées dès l'ouverture de la page (perf catastrophique).
+    // C'est l'IntersectionObserver plus bas qui les charge à l'approche de la
+    // section. Repli : si l'observateur n'existe pas (très vieux navigateur),
+    // on garde le préchargement immédiat pour que l'animation fonctionne.
+    if (!('IntersectionObserver' in window)) preload();
     window.addEventListener('scroll', onScroll, { passive: true });
     render();
   }
@@ -158,7 +177,7 @@
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       if (entries[0].isIntersecting && enabled()) preload();
-    }, { rootMargin: '600px 0px' });
+    }, { rootMargin: '1500px 0px' });
     io.observe(section);
   }
 

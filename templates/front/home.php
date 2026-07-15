@@ -6,6 +6,7 @@ $offres   = $page['offres'] ?? [];
 $garage   = $page['garage'] ?? [];
 $process  = $page['process'] ?? [];
 $contact  = $page['contact'] ?? [];
+$faq      = $page['faq'] ?? [];
 $email    = $settings['email'] ?? '';
 $calendly = $settings['calendly'] ?? '';
 $whatsapp = $settings['whatsapp'] ?? '';
@@ -161,6 +162,17 @@ $waLink   = $whatsapp ? 'https://wa.me/' . preg_replace('/\D/', '', $whatsapp) :
     <?php endif; ?>
   </div>
 </section>
+
+<!-- FAQ -->
+<?php if (!empty($faq)): ?>
+<section id="faq" class="faq">
+  <div class="wrap">
+    <span class="eyebrow">Questions fréquentes</span>
+    <h2 class="titre">Vous vous demandez peut-être…</h2>
+    <?php $faqItems = $faq; include TEMPLATES_PATH . '/partials/faq.php'; ?>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- CONTACT -->
 <section id="contact" class="dark pied">

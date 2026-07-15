@@ -22,6 +22,36 @@ function admin_url(string $sub = ''): string
     return url(ADMIN_ROUTE . ($sub !== '' ? '/' . $sub : ''));
 }
 
+/** Génère une balise <script> de données structurées JSON-LD (SEO). */
+function json_ld(array $data): string
+{
+    return '<script type="application/ld+json">'
+        . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
+        . '</script>' . "\n";
+}
+
+/** Construit un objet FAQPage (schema.org) depuis une liste [{question, answer}]. */
+function faq_schema(array $items): ?array
+{
+    $entities = [];
+    foreach ($items as $it) {
+        $q = trim($it['question'] ?? '');
+        $a = trim($it['answer'] ?? '');
+        if ($q === '' || $a === '') {
+            continue;
+        }
+        $entities[] = [
+            '@type' => 'Question',
+            'name' => $q,
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => $a],
+        ];
+    }
+    if (!$entities) {
+        return null;
+    }
+    return ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $entities];
+}
+
 /** Redirige puis stoppe le script. */
 function redirect(string $path): void
 {

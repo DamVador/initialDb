@@ -91,6 +91,7 @@ switch ($route) {
         ], [
             'title'       => $seo['seo_title'] ?? 'Initial Db · Studio digital',
             'description' => $seo['seo_description'] ?? '',
+            'jsonld'      => array_values(array_filter([faq_schema($page['faq'] ?? [])])),
         ]);
         break;
 
@@ -168,6 +169,27 @@ switch ($route) {
         route_collection_page('secteurs', 'Secteurs d\'activité', $segments[1] ?? null);
         break;
 
+    /* Contact (money page) */
+    case 'contact':
+        $cpage = Content::page('contact');
+        $settings = Content::settings();
+        $contactLd = [
+            '@context' => 'https://schema.org',
+            '@type'    => 'ContactPage',
+            'name'     => ($cpage['seo_title'] ?? '') ?: ($cpage['titre'] ?? 'Contact'),
+            'url'      => (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http')
+                          . '://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') . url('contact'),
+        ];
+        front('contact', ['cpage' => $cpage], [
+            'title'       => ($cpage['seo_title'] ?? '') ?: 'Contact — Initial Db',
+            'description' => ($cpage['seo_description'] ?? '') ?: ($cpage['intro'] ?? ''),
+            'jsonld'      => array_values(array_filter([$contactLd, faq_schema($cpage['faq'] ?? [])])),
+        ], [
+            ['label' => 'Accueil', 'url' => url('')],
+            ['label' => 'Contact'],
+        ]);
+        break;
+
     /* Mentions légales */
     case 'mentions-legales':
         front('mentions', [], [
@@ -196,6 +218,7 @@ function route_collection_page(string $name, string $listTitle, ?string $slug): 
         front('simple-page', ['item' => $item, 'route' => $name], [
             'title'       => ($item['seo_title'] ?? '') ?: $item['title'],
             'description' => ($item['seo_description'] ?? '') ?: excerpt($item['description'] ?? $item['intro'] ?? ''),
+            'jsonld'      => array_values(array_filter([faq_schema($item['faq'] ?? [])])),
         ], [
             ['label' => 'Accueil', 'url' => url('')],
             ['label' => $listTitle, 'url' => url($name)],

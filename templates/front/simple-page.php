@@ -25,6 +25,13 @@ $isOffre = ($route === 'offres');
     <div class="prose"><?= $item['body'] ?></div>
     <?php endif; ?>
 
+    <?php if (!empty($item['faq'])): ?>
+    <div class="page-faq">
+      <h2 class="page-faq-titre">Questions fréquentes</h2>
+      <?php $faqItems = $item['faq']; include TEMPLATES_PATH . '/partials/faq.php'; ?>
+    </div>
+    <?php endif; ?>
+
     <div class="page-cta">
       <a href="<?= url('') ?>#contact" class="cta"><?= e($item['cta_label'] ?? 'Démarrer un projet') ?></a>
       <a href="<?= url($route) ?>" class="cta-ligne"><?= $isOffre ? '← Toutes les offres' : '← Tous les secteurs' ?></a>
